@@ -1,0 +1,21 @@
+{
+  "name": "mosemetro-svg-map",
+  "version": "0.0.0",
+  "description": "moscow metro map",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/shamshod/mosemetro-svg-map.git"
+  },
+  "author": "shamshod",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/shamshod/mosemetro-svg-map#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.3",
+    "gulp-concat": "^2.6.1"
+  }
+}
