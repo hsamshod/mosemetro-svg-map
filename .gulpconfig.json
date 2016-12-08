@@ -1,0 +1,26 @@
+{
+  "browsersync": {
+    "options": {
+        "proxy": "map.dev",
+      "open":  "external"
+    }
+  },
+  "coffee": {
+    "task" : {
+      "options": {
+        "bare": true
+      }
+    },
+    "assets": {
+      "src": [
+        "js/coffee/*.coffee"
+      ],
+      "bundle": "assets.js",
+      "dest": "js/"
+    }
+  },
+  "bower": {
+    "dest": "js/",
+    "bundle": "vendor.js"
+  }
+}
