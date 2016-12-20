@@ -13,14 +13,15 @@
     },
     "assets": {
       "src": [
-        "js/coffee/*.coffee"
+        "scripts/coffee/**/*coffee",
+        "!scripts/coffee/svg.coffee"
       ],
       "bundle": "assets.js",
-      "dest": "js/"
+      "dest": "scripts"
     }
   },
   "bower": {
-    "dest": "js/",
+    "dest": "scripts/",
     "bundle": "vendor.js"
   }
 }

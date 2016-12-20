@@ -1,0 +1,27 @@
+{
+  "name": "egerep-svg-metro",
+  "description": "metro map for ege-* apps",
+  "main": "index.html",
+  "authors": [
+    "shamshod"
+  ],
+  "license": "MIT",
+  "homepage": "www.ege-repetitor.ru",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "scripts/bower"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "underscore": "^1.8.3",
+    "bootstrap": "^3.3.7",
+    "jquery.panzoom": "^3.2.2"
+  },
+  "devDependencies": {
+    "jquery.panzoom": "^3.2.2"
+  }
+}

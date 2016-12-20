@@ -7,11 +7,10 @@ var browserSync = require('browser-sync').create();
 var coffee_cnf  = config.coffee;
 
 bower_packages = [
-    'js/bower/jquery/dist/jquery.slim.min.js',
-    'js/bower/angular/angular.min.js',
-    'js/bower/underscore/underscore.min.js',
-    'js/bower/panzoom/jquery.panzoom.min.js',
-    'js/bower/panzoom/pinchzoom.js'
+    'scripts/bower/jquery/dist/jquery.slim.min.js',
+    'scripts/bower/angular/angular.min.js',
+    'scripts/bower/underscore/underscore-min.js',
+    'scripts/bower/jquery.panzoom/dist/jquery.panzoom.min.js'
 ];
 
 gulp.task('build-vendor', function() {
