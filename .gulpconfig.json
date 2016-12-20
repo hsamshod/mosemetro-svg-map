@@ -6,17 +6,24 @@
     }
   },
   "coffee": {
-    "task" : {
+    "task": {
       "options": {
         "bare": true
       }
     },
-    "assets": {
+    "module": {
       "src": [
-        "scripts/coffee/**/*coffee",
-        "!scripts/coffee/svg.coffee"
+        "scripts/coffee/**/*.coffee",
+        "!scripts/coffee/app.coffee"
       ],
-      "bundle": "assets.js",
+      "bundle": "svg.js",
+      "dest": "scripts"
+    },
+    "app": {
+      "src": [
+        "scripts/coffee/app.coffee"
+      ],
+      "bundle": "app.js",
       "dest": "scripts"
     }
   },

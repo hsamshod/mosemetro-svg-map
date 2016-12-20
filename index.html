@@ -2,9 +2,10 @@
     <head>
         <title>svg map</title>
         <script src='scripts/vendor.js'></script>
-        <script src='scripts/assets.js'></script>
-        <link rel='stylesheet' href='scripts/bower/bootstrap/dist/css/bootstrap.min.css'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+        <script src='scripts/app.js'></script>
+        <meta name='viewport'
+              content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+        >
         <style>
             body {
                 margin: 0;
@@ -14,7 +15,7 @@
             }
 
             #overlay {
-                position: fixed;
+                position: absolute;
                 width: 96%;
                 height: 96%;
                 background: navajowhite;
@@ -23,20 +24,22 @@
                 overflow: hidden;
                 z-index: 4;
             }
+
+            .svg-map {
+                position: relative!important;
+            }
         </style>
     </head>
-    <body ng-app='svg-map'
+    <body ng-app='ege-rep'
           ng-controller='map'
           ng-init='selected_stations = [61,95,161];'
     >
         <div class='container'>
             <span ng-click='showmap = showmap + 1'>show</span>
         </div>
-
         <div id="overlay" ng-show='showmap % 2'>
             <svg-map id='tutor-123'
                      selected='selected_stations'
-                     selectable
                      scalable
             ></svg-map>
         </div>

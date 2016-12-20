@@ -1,5 +1,7 @@
-app.directive 'svgMap', ->
-	templateUrl: map_path + 'map.svg'
+angular.module 'egerep.svgmap', []
+angular.module 'egerep.svgmap'
+.directive 'svgMap', ->
+	templateUrl: 'views/map.svg'
 	restrict: 'E'
 	replace: true
 	scope:
@@ -94,8 +96,10 @@ app.directive 'svgMap', ->
 		bindPinch = ->
 #			$element.css 'width', $attrs.width
 #			$element.css 'height', $attrs.height
-			$element.panzoom()
+#			$element.panzoom()
 
+			new RTP.PinchZoom $element, {}
+			$element.css('position','relative!important');
 
 		save = ->
 			console.log 'save'

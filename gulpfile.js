@@ -10,7 +10,9 @@ bower_packages = [
     'scripts/bower/jquery/dist/jquery.slim.min.js',
     'scripts/bower/angular/angular.min.js',
     'scripts/bower/underscore/underscore-min.js',
-    'scripts/bower/jquery.panzoom/dist/jquery.panzoom.min.js'
+    'scripts/bower/jquery.panzoom/dist/jquery.panzoom.min.js',
+    'scripts/bower/pinchzoom/src/pinchzoom.min.js',
+    'scripts/svg.js'
 ];
 
 gulp.task('build-vendor', function() {
@@ -19,11 +21,20 @@ gulp.task('build-vendor', function() {
         .pipe(gulp.dest(config.bower.dest));
 });
 
-gulp.task('assets', function() {
-    gulp.src(coffee_cnf.assets.src)
+gulp.task('module', function() {
+    gulp.src(coffee_cnf.module.src)
         .pipe(coffee(coffee_cnf.task.options))
-        .pipe(concat(coffee_cnf.assets.bundle))
-        .pipe(gulp.dest(coffee_cnf.assets.dest));
+        .pipe(concat(coffee_cnf.module.bundle))
+        .pipe(gulp.dest(coffee_cnf.module.dest));
+
+    browserSync.reload();
+});
+
+gulp.task('app', function() {
+    gulp.src(coffee_cnf.app.src)
+        .pipe(coffee(coffee_cnf.task.options))
+        .pipe(concat(coffee_cnf.app.bundle))
+        .pipe(gulp.dest(coffee_cnf.app.dest));
 
     browserSync.reload();
 });
@@ -31,7 +42,8 @@ gulp.task('assets', function() {
 gulp.task('watch', ['build-vendor'], function() {
     browserSync.init(config.browsersync.options);
 
-    gulp.watch(coffee_cnf.assets.src, ['assets']);
+    gulp.watch(coffee_cnf.module.src, ['module', 'build-vendor']);
+    gulp.watch(coffee_cnf.app.src, ['app']);
 });
 
-gulp.task('default', ['assets', 'build-vendor']);
+gulp.task('default', ['app', 'module', 'build-vendor']);
