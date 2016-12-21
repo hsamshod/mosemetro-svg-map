@@ -1417,7 +1417,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       bindPinch = function() {
         return $element.panzoom({
-          contain: 'automatic'
+          contain: 'automatic',
+          minScale: 1,
+          maxScale: 3
         });
       };
       save = function() {

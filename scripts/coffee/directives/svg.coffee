@@ -94,14 +94,10 @@ angular
 					.on 'click', toggle
 
 			bindPinch = ->
-#				$element.css 'width', $attrs.width
-#				$element.css 'height', $attrs.height
 				$element.panzoom
 					contain: 'automatic'
-#					animate: true
-
-#				new RTP.PinchZoom $element, {}
-#				$element.css('position','relative!important');
+					minScale: 1
+					maxScale: 3
 
 			save = ->
 				console.log 'save'
