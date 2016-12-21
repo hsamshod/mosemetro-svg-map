@@ -1,6 +1,6 @@
 angular.module('svgmap', []).directive('svgMap', function() {
   return {
-    templateUrl: 'views/map.svg',
+    templateUrl: 'img/svg/map.svg',
     restrict: 'E',
     replace: true,
     scope: {
@@ -20,9 +20,6 @@ angular.module('svgmap', []).directive('svgMap', function() {
         shown: ':not(.map-hidden)'
       };
       init = function() {
-        if (!$scope.id) {
-          log('elem not specified');
-        }
         deselectAll();
         if ($scope.selected && $scope.selected.length) {
           selectAll();

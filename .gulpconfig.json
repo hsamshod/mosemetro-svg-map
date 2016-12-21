@@ -13,7 +13,7 @@
     },
     "module": {
       "src": [
-        "scripts/directives/*.coffee"
+        "scripts/coffee/directives/*.coffee"
       ],
       "bundle": "svg.js",
       "dest": "scripts"

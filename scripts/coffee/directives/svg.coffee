@@ -18,7 +18,6 @@ angular
 				shown:          ':not(.map-hidden)'
 
 			init = ->
-				log 'elem not specified' if not $scope.id
 				deselectAll()
 				selectAll() if $scope.selected && $scope.selected.length
 				bindClick() if $attrs.hasOwnProperty 'selectable'
