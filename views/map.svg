@@ -1,4 +1,4 @@
-<div class="svg-map" style="border:4px solid red;height:calc(150vh);width:calc(150vh);left:-50vh;top:-25vh;position:relative;">
+<div class="svg-map" style="height:calc(150vh);width:calc(150vh);left:-50vh;top:-25vh;position:relative;">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="100" y="100"
          viewBox="-150 -130 1100 1100" style="background:#fff;width:100%;height:100%;" xml:space="preserve">
             <style type="text/css">
