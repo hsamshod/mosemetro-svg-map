@@ -13,8 +13,7 @@
     },
     "module": {
       "src": [
-        "scripts/coffee/**/*.coffee",
-        "!scripts/coffee/app.coffee"
+        "scripts/directives/*.coffee"
       ],
       "bundle": "svg.js",
       "dest": "scripts"
@@ -24,11 +23,11 @@
         "scripts/coffee/app.coffee"
       ],
       "bundle": "app.js",
-      "dest": "scripts"
+      "dest": ""
     }
   },
   "bower": {
-    "dest": "scripts/",
-    "bundle": "vendor.js"
+    "bundle": "vendor.js",
+    "dest": ""
   }
 }

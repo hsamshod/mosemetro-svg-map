@@ -13,6 +13,7 @@ bower_packages = [
     'scripts/bower/angular/angular.min.js',
     'scripts/bower/underscore/underscore-min.js',
     'scripts/bower/pinchzoom/src/pinchzoom.js',
+    'scripts/bower/jquery.panzoom/dist/jquery.panzoom.js',
     'scripts/svg.js'
 ];
 
@@ -26,7 +27,6 @@ gulp.task('module', function() {
     gulp.src(coffee_cnf.module.src)
         .pipe(coffee(coffee_cnf.task.options))
         .pipe(sourcemaps.write())
-        .pipe(addsrc('scripts/depencies/panzoom/dist/jquery.panzoom.js'))
         .pipe(concat(coffee_cnf.module.bundle))
         .pipe(gulp.dest(coffee_cnf.module.dest));
 

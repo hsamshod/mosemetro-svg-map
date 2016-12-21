@@ -20,7 +20,7 @@ angular
 			init = ->
 				log 'elem not specified' if not $scope.id
 				deselectAll()
-				selectAll() if $scope.selected.length
+				selectAll() if $scope.selected && $scope.selected.length
 				bindClick() if $attrs.hasOwnProperty 'selectable'
 				bindPinch() if $attrs.hasOwnProperty 'scalable'
 
@@ -100,6 +100,9 @@ angular
 					contain: 'automatic'
 					minScale: 1
 					maxScale: 3
+					panOnlyWhenZoomed: true
+				$element.panzoom 'zoom', 2,
+					silent: true
 
 			save = ->
 				console.log 'save'
