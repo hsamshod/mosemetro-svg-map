@@ -1,7 +1,7 @@
 angular
 	.module 'svgmap', []
 	.directive 'svgMap', ->
-		templateUrl: 'views/map.svg'
+		templateUrl: 'img/map.svg'
 		restrict: 'E'
 		replace: true
 		scope:
