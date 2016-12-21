@@ -1,0 +1,50 @@
+# egerep-svg-metro
+
+
+## Dependencies
+```
+ angular ^1.5.8
+ underscore ^1.8.3
+ bootstrap ^3.3.7
+ jquery.panzoom ^3.2.2
+```
+
+
+## Usage
+
+install package
+```
+bower install --save egerep-svg-metro
+```
+
+concat with vendor files
+```js
+elixir(mix => {
+    mix.scripts(jsFromBower([
+        'egerep-svg-metro/scripts/svg'
+    ]);
+});
+```
+
+add module as depency to your app
+```coffee
+angular.module 'some-module', ['svgmap', ...]
+```
+
+insert directive to page
+```html
+<svg-map id='some-id' selected='selected_stations'></svg-map>
+```
+
+## Options
+
+`"scalable"` - adds scaling feature
+```html
+<svg-map id="some-id" selected="[1, 2, 3]" scalable></svg-map> 
+```
+
+`"selectable"` -  add selecting stations feature
+
+```html
+<svg-map id="some-id" selected="[1, 2, 3]" selectable></svg-map> 
+```
