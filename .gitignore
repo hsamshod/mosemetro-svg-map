@@ -2,4 +2,5 @@
 node_modules
 scripts/bower
 scripts/*.js
+!scripts/depencies
 .idea

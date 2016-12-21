@@ -2,6 +2,8 @@ var config      = require('./.gulpconfig.json');
 var gulp 		= require('gulp');
 var coffee 		= require('gulp-coffee');
 var concat 		= require('gulp-concat');
+var addsrc 		= require('gulp-add-src');
+var sourcemaps = require('gulp-sourcemaps');
 
 var browserSync = require('browser-sync').create();
 var coffee_cnf  = config.coffee;
@@ -10,8 +12,7 @@ bower_packages = [
     'scripts/bower/jquery/dist/jquery.slim.min.js',
     'scripts/bower/angular/angular.min.js',
     'scripts/bower/underscore/underscore-min.js',
-    'scripts/bower/jquery.panzoom/dist/jquery.panzoom.min.js',
-    'scripts/bower/pinchzoom/src/pinchzoom.min.js',
+    'scripts/bower/pinchzoom/src/pinchzoom.js',
     'scripts/svg.js'
 ];
 
@@ -24,6 +25,8 @@ gulp.task('build-vendor', function() {
 gulp.task('module', function() {
     gulp.src(coffee_cnf.module.src)
         .pipe(coffee(coffee_cnf.task.options))
+        .pipe(sourcemaps.write())
+        .pipe(addsrc('scripts/depencies/panzoom/dist/jquery.panzoom.js'))
         .pipe(concat(coffee_cnf.module.bundle))
         .pipe(gulp.dest(coffee_cnf.module.dest));
 

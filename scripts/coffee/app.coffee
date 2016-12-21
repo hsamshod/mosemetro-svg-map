@@ -11,7 +11,9 @@ getArguments = (func) ->
 	result = [] if result is null
 	result
 
-app = angular.module 'ege-rep', ['egerep.svgmap']
+scope = false
+
+app = angular.module 'ege-rep', ['svgmap']
 	.controller 'map', ($scope) ->
 		$scope.showmap = 0
 		scope = angular.element '[ng-app=ege-rep]'
