@@ -91,9 +91,11 @@ angular
 
 			bindClick = ->
 				$ "#{selectors.stations}", $element
+					.off 'click'
 					.on 'click', toggle
 
 			bindPinch = ->
+				$element.panzoom 'destroy'
 				$element.panzoom
 					contain: 'automatic'
 					minScale: 1
@@ -109,5 +111,8 @@ angular
 				id = station.attr 'id'
 							.replace 'station-', ''
 				parseInt id
+
+			$scope.$watch 'selected', (newVal, oldVal) ->
+				init()
 
 			init()

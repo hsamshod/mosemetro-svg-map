@@ -283,7 +283,7 @@
 		transition: true,
 
 		// Default cursor style for the element
-		cursor: 'move',
+		cursor: 'auto',
 
 		// There may be some use cases for zooming without panning or vice versa
 		disablePan: false,
@@ -901,7 +901,15 @@
 			if (!this.options.disablePan) {
 				styles.cursor = this.options.cursor;
 			}
-			this.$set.css(styles);
+
+            _.extend(styles, {
+                height: 'calc(150vh)',
+                width:  'calc(150vh)',
+                left:   '-50vh',
+                top:    '-25vh'
+            });
+
+            this.$set.css(styles);
 
 			// Set parent to relative if set to static
 			var $parent = this.$parent;
@@ -1413,9 +1421,10 @@ angular.module('svgmap', []).directive('svgMap', function() {
         }
       };
       bindClick = function() {
-        return $("" + selectors.stations, $element).on('click', toggle);
+        return $("" + selectors.stations, $element).off('click').on('click', toggle);
       };
       bindPinch = function() {
+        $element.panzoom('destroy');
         return $element.panzoom({
           contain: 'automatic',
           minScale: 1,
@@ -1433,6 +1442,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
         id = station.attr('id').replace('station-', '');
         return parseInt(id);
       };
+      $scope.$watch('selected', function(newVal, oldVal) {
+        return init();
+      });
       return init();
     }
   };
