@@ -18,13 +18,11 @@
   "dependencies": {
     "angular": "^1.5.8",
     "underscore": "^1.8.3",
-    "bootstrap": "^3.3.7",
     "jquery.panzoom": "^3.2.2"
   },
   "devDependencies": {
     "jquery.panzoom": "^3.2.2",
     "angular": "^1.5.8",
-    "underscore": "^1.8.3",
-    "bootstrap": "^3.3.7"
+    "underscore": "^1.8.3"
   }
 }
