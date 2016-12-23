@@ -16,8 +16,6 @@
     "scripts/bower"
   ],
   "dependencies": {
-    "angular": "^1.5.8",
-    "underscore": "^1.8.3",
     "jquery.panzoom": "^3.2.2"
   },
   "devDependencies": {
