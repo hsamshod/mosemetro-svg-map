@@ -44,7 +44,7 @@
         </style>
         <g id="lines">
             <!-- порядок важен чтобы слои линий правильно рендерились -->
-            <g id="line-14" data-name="mcc">
+            <g id="line-13" data-name="mcc">
                 <path class="station-219 station-220 st2" d="M317,136.4c10.5-4.8,21.4-8.9,32.6-12.3"/>
                 <path class="station-220 station-221 st2" d="M350.1,124.4c24.1-7.3,49.8-11.2,76.3-11.2c7.3,0,14.6,0.3,21.8,0.9"/>
                 <path class="station-221 station-222 st2" d="M448.2,114.1c14.4,1.2,28.5,3.5,42.1,6.9"/>
@@ -1024,65 +1024,65 @@
                     <text transform="matrix(1 0 0 1 101.8741 714.2432)" class="st43 st44">САЛАРЬЕВО</text>
                 </g>
             </g>
-            <g id="line-14">
-                <g class="line-14 station-219" id="station-219" data-name="baltiyskaya">
+            <g id="line-13">
+                <g class="line-13 station-219" id="station-219" data-name="baltiyskaya">
                     <rect x="248.3" y="131.4" class="st4" width="59.3" height="10.8"/>
                     <circle class="st41" cx="317" cy="136.8" r="4.7"/>
                     <text transform="matrix(1 0 0 1 250.6612 140.0742)" class="st43 st44">БАЛТИЙСКАЯ</text>
                 </g>
-                <g class="line-14 station-220" id="station-220" data-name="lixobory">
+                <g class="line-13 station-220" id="station-220" data-name="lixobory">
                     <circle class="st41" cx="349.7" cy="124.7" r="4.7"/>
                 </g>
-                <g class="line-14 station-221" id="station-221" data-name="vladikino">
+                <g class="line-13 station-221" id="station-221" data-name="vladikino">
                     <circle class="st41" cx="448.6" cy="114.4" r="4.7"/>
                 </g>
-                <g class="line-14 station-222" id="station-222" data-name="botanicheskiy-sad">
+                <g class="line-13 station-222" id="station-222" data-name="botanicheskiy-sad">
                     <circle class="st41" cx="489.8" cy="121" r="4.7"/>
                 </g>
-                <g class="line-14 station-223" id="station-223" data-name="rostokino">
+                <g class="line-13 station-223" id="station-223" data-name="rostokino">
                     <circle class="st41" cx="536.5" cy="137.2" r="4.7"/>
                 </g>
-                <g class="line-14 station-224" id="station-224" data-name="lokomotiv">
+                <g class="line-13 station-224" id="station-224" data-name="lokomotiv">
                     <circle class="st41" cx="580.5" cy="162.9" r="4.7"/>
                     <text transform="matrix(1 0 0 1 591.2554 165.8237)" class="st43 st44">ЛОКОМОТИВ</text>
                 </g>
-                <g class="line-14 station-225" id="station-225" data-name="izmaylovo">
+                <g class="line-13 station-225" id="station-225" data-name="izmaylovo">
                     <circle class="st41" cx="667.2" cy="268.1" r="4.7"/>
                     <text transform="matrix(1 0 0 1 677.5914 271.2412)" class="st43 st44">ИЗМАЙЛОВО</text>
                 </g>
-                <g class="line-14 station-226" id="station-226" data-name="sokolinaya-gora">
+                <g class="line-13 station-226" id="station-226" data-name="sokolinaya-gora">
                     <circle class="st41" cx="684.7" cy="322.2" r="4.7"/>
                     <text transform="matrix(1 0 0 1 690.5132 325.0742)" class="st43 st44">СОКОЛИНАЯ ГОРА</text>
                 </g>
-                <g class="line-14 station-227" id="station-227" data-name="shosse-entuziastov">
+                <g class="line-13 station-227" id="station-227" data-name="shosse-entuziastov">
                     <circle class="st41" cx="690.4" cy="386.4" r="4.7"/>
                 </g>
-                <g class="line-14 station-228" id="station-228" data-name="nijegorodskaya">
+                <g class="line-13 station-228" id="station-228" data-name="nijegorodskaya">
                     <circle class="st41" cx="684.2" cy="435.2" r="4.7"/>
                     <text transform="matrix(1 0 0 1 692.5836 438.5742)" class="st43 st44">НИЖЕГОРОДСКАЯ</text>
                 </g>
-                <g class="line-14 station-229" id="station-229" data-name="dubrovka">
+                <g class="line-13 station-229" id="station-229" data-name="dubrovka">
                     <circle class="st41" cx="591.1" cy="584" r="4.7"/>
                 </g>
-                <g class="line-14 station-230" id="station-230" data-name="avtozavodskaya">
+                <g class="line-13 station-230" id="station-230" data-name="avtozavodskaya">
                     <circle class="st41" cx="564.4" cy="602.6" r="4.7"/>
                 </g>
-                <g class="line-14 station-231" id="station-231" data-name="ploshad-gagarina">
+                <g class="line-13 station-231" id="station-231" data-name="ploshad-gagarina">
                     <circle class="st41" cx="284.8" cy="600.3" r="4.7"/>
                 </g>
-                <g class="line-14 station-232" id="station-232" data-name="lujniki">
+                <g class="line-13 station-232" id="station-232" data-name="lujniki">
                     <circle class="st41" cx="240" cy="564.8" r="4.7"/>
                 </g>
-                <g class="line-14 station-233" id="station-233" data-name="kutuzovskaya">
+                <g class="line-13 station-233" id="station-233" data-name="kutuzovskaya">
                     <circle class="st41" cx="164.3" cy="407.9" r="4.7"/>
                     <rect x="77.2" y="394.1" class="st4" width="68.5" height="10.2"/>
                     <text transform="matrix(1 0 0 1 85.649 402.2407)" class="st43 st44">КУТУЗОВСКАЯ</text>
                 </g>
-                <g class="line-14 station-234" id="station-234" data-name="shelepixa">
+                <g class="line-13 station-234" id="station-234" data-name="shelepixa">
                     <circle class="st41" cx="183.4" cy="274.3" r="4.7"/>
                     <text transform="matrix(1 0 0 1 128.981 277.2407)" class="st43 st44">ШЕЛЕПИХА</text>
                 </g>
-                <g class="line-14 station-235" id="station-235" data-name="panfilovskaya">
+                <g class="line-13 station-235" id="station-235" data-name="panfilovskaya">
                     <circle class="st41" cx="226" cy="205.1" r="4.7"/>
                 </g>
             </g>
