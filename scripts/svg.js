@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs) {
-      var bindClick, bindPinch, classes, deselect, deselectAll, deselectLine, deselectRelation, init, isHidden, log, parseId, save, select, selectAll, selectLine, selectRelation, selectors, toggle;
+      var bindClick, bindPinch, classes, deselect, deselectAll, deselectLine, deselectRelation, getStation, getStationClass, hide, init, isHidden, log, parseId, save, select, selectAll, selectLine, selectRelation, selectors, show, toggle;
       classes = {
         hidden: 'map-hidden'
       };
@@ -42,7 +42,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return results;
       };
       select = function(station_id, initing) {
-        $(selectors.stations + "#station-" + station_id, $element).removeClass(classes.hidden);
+        show(getStation(station_id));
         selectRelation(station_id);
         selectLine(station_id);
         if (!initing) {
@@ -50,7 +50,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         }
       };
       selectRelation = function(station_id) {
-        return $(selectors.elements + ".station-" + station_id, $element).removeClass(classes.hidden);
+        return show($(selectors.elements + ".station-" + station_id, $element));
       };
       selectLine = function(station_id) {
         var next, prev, station;
@@ -69,41 +69,52 @@ angular.module('svgmap', []).directive('svgMap', function() {
             if (item.length) {
               line_class = ".station-" + station_id + "." + (item.attr('id'));
               line_class = "" + (selectors.lines.join(line_class + ',') + line_class);
-              return $(line_class, $element).removeClass(classes.hidden);
+              return show($(line_class, $element));
             }
           };
         })(this));
       };
       deselectAll = function(reset_data) {
-        $(selectors.stations + ", " + selectors.elements + ", " + (selectors.lines.join()), $element).addClass(classes.hidden);
+        hide($(selectors.stations + ", " + selectors.elements + ", " + (selectors.lines.join()), $element));
         if (reset_data) {
           return options.selected = [];
         }
       };
       deselect = function(station_id) {
-        $(selectors.stations + "#station-" + station_id, $element).addClass(classes.hidden);
+        hide(getStation(station_id));
         deselectRelation(station_id);
         return deselectLine(station_id);
       };
       deselectRelation = function(station_id) {
-        return $(selectors.elements + ".station-" + station_id, $element).addClass(classes.hidden);
+        var enabled_count, relation;
+        relation = $(selectors.elements + ".station-" + station_id, $element);
+        if (relation.length) {
+          enabled_count = _.reduce(relation[0].classList, function(memo, relation_class) {
+            if ((relation_class !== getStationClass(station_id)) && relation_class.match(/station\-[0-9]+$/) && !isHidden(getStation(parseId(relation_class)))) {
+              memo++;
+            }
+            return memo;
+          }, 0);
+          if (!enabled_count) {
+            return hide(relation);
+          }
+        }
       };
       deselectLine = function(station_id) {
         var line_class, station;
         station = $(selectors.stations + ".station-" + station_id, $element);
         line_class = ".station-" + station_id;
         line_class = "" + (selectors.lines.join(line_class + ',') + line_class);
-        return $(line_class, $element).addClass(classes.hidden);
+        return hide($(line_class, $element));
       };
       toggle = function(event) {
-        var elem, station, station_id;
+        var elem, station;
         elem = $(event.target);
         station = elem.parent('g', $element);
-        station_id = station.attr('id').replace('station-', '');
         if (isHidden(station)) {
-          return select(parseInt(station_id));
+          return select(parseId(station));
         } else {
-          return deselect(parseInt(station_id));
+          return deselect(parseId(station));
         }
       };
       bindClick = function() {
@@ -112,10 +123,11 @@ angular.module('svgmap', []).directive('svgMap', function() {
       bindPinch = function() {
         $element.panzoom('destroy');
         $element.panzoom({
-          contain: 'automatic',
           minScale: 1,
           maxScale: 3,
-          panOnlyWhenZoomed: true
+          contain: 'automatic',
+          panOnlyWhenZoomed: true,
+          animate: false
         });
         return $element.panzoom('zoom', 2, {
           silent: true
@@ -129,11 +141,27 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       parseId = function(station) {
         var id;
-        id = station.attr('id').replace('station-', '');
+        if (_.isString(station)) {
+          id = station.replace('station-', '');
+        } else {
+          id = station.attr('id').replace('station-', '');
+        }
         return parseInt(id);
+      };
+      getStation = function(station_id) {
+        return $(selectors.stations + "#station-" + station_id, $element);
       };
       isHidden = function(station) {
         return station.is(selectors.hidden);
+      };
+      getStationClass = function(station_id) {
+        return "station-" + station_id;
+      };
+      hide = function(elem) {
+        return elem.addClass(classes.hidden);
+      };
+      show = function(elem) {
+        return elem.removeClass(classes.hidden);
       };
       $scope.$watch('selected', function(newVal, oldVal) {
         return init();

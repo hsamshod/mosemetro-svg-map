@@ -27,15 +27,13 @@ angular
 				select station_id, true for station_id in $scope.selected
 
 			select = (station_id, initing) ->
-				$ "#{selectors.stations}#station-#{station_id}", $element
-					.removeClass classes.hidden
+				show getStation station_id
 				selectRelation station_id
 				selectLine station_id
 				$scope.selected.push station_id if not initing
 
 			selectRelation = (station_id) ->
-				$ "#{selectors.elements}.station-#{station_id}", $element
-					.removeClass classes.hidden
+				show $ "#{selectors.elements}.station-#{station_id}", $element
 
 			selectLine = (station_id) ->
 				station = $ "#{selectors.stations}.station-#{station_id}", $element
@@ -52,23 +50,26 @@ angular
 							line_class = ".station-#{station_id}.#{item.attr 'id'}"
 							line_class = "#{selectors.lines.join(line_class + ',') + line_class}"
 
-							$ line_class, $element
-								.removeClass classes.hidden
+							show $ line_class, $element
 
 			deselectAll = (reset_data) ->
-				$ "#{selectors.stations}, #{selectors.elements}, #{selectors.lines.join()}", $element
-					.addClass classes.hidden
+				hide $ "#{selectors.stations}, #{selectors.elements}, #{selectors.lines.join()}", $element
 				options.selected = [] if reset_data
 
 			deselect = (station_id) ->
-				$ "#{selectors.stations}#station-#{station_id}", $element
-					.addClass classes.hidden
+				hide getStation station_id
 				deselectRelation station_id
 				deselectLine station_id
 
 			deselectRelation = (station_id) ->
-				$ "#{selectors.elements}.station-#{station_id}", $element
-					.addClass classes.hidden
+				relation = $ "#{selectors.elements}.station-#{station_id}", $element
+				if relation.length
+					enabled_count = _.reduce relation[0].classList, (memo, relation_class) ->
+						memo++ if (relation_class != getStationClass station_id) and relation_class.match(/station\-[0-9]+$/) and not isHidden getStation parseId relation_class
+						memo
+					, 0
+
+					hide relation if not enabled_count
 
 			deselectLine = (station_id) ->
 				station = $ "#{selectors.stations}.station-#{station_id}", $element
@@ -76,19 +77,15 @@ angular
 				line_class = ".station-#{station_id}"
 				line_class = "#{selectors.lines.join(line_class + ',') + line_class}"
 
-				$ line_class, $element
-					.addClass classes.hidden
+				hide $ line_class, $element
 
 			toggle = (event) ->
 				elem = $ event.target
 				station = elem.parent 'g', $element
-				station_id = station.attr 'id'
-								.replace 'station-', ''
 				if isHidden station
-
-					select parseInt station_id
+					select parseId station
 				else
-					deselect parseInt station_id
+					deselect parseId station
 
 			bindClick = ->
 				$ "#{selectors.stations}", $element
@@ -98,10 +95,11 @@ angular
 			bindPinch = ->
 				$element.panzoom 'destroy'
 				$element.panzoom
-					contain: 'automatic'
 					minScale: 1
 					maxScale: 3
+					contain: 'automatic'
 					panOnlyWhenZoomed: true
+					animate: false
 				$element.panzoom 'zoom', 2,
 					silent: true
 
@@ -112,12 +110,28 @@ angular
 				throw "svg-map: #{message}"
 
 			parseId = (station) ->
-				id = station.attr 'id'
+				if _.isString station
+					id = station.replace 'station-', ''
+				else
+					id = station.attr 'id'
 							.replace 'station-', ''
 				parseInt id
 
+
+			getStation = (station_id) ->
+				$ "#{selectors.stations}#station-#{station_id}", $element
+
 			isHidden = (station) ->
 				station.is selectors.hidden
+
+			getStationClass = (station_id) ->
+				"station-#{station_id}"
+
+			hide = (elem) ->
+				elem.addClass classes.hidden
+
+			show = (elem) ->
+				elem.removeClass classes.hidden
 
 			$scope.$watch 'selected', (newVal, oldVal) ->
 				init()
