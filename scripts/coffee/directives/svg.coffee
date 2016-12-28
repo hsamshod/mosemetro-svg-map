@@ -24,14 +24,14 @@ angular
 				bindPinch() if $attrs.hasOwnProperty 'scalable'
 
 			selectAll = ->
-				select station_id for station_id in $scope.selected
+				select station_id, true for station_id in $scope.selected
 
-			select = (station_id) ->
+			select = (station_id, initing) ->
 				$ "#{selectors.stations}#station-#{station_id}", $element
 					.removeClass classes.hidden
 				selectRelation station_id
 				selectLine station_id
-				$scope.selected.push station_id
+				$scope.selected.push station_id if not initing
 
 			selectRelation = (station_id) ->
 				$ "#{selectors.elements}.station-#{station_id}", $element
@@ -82,11 +82,12 @@ angular
 			toggle = (event) ->
 				elem = $ event.target
 				station = elem.parent 'g', $element
+				station = +station
 
-				if station.is selectors.hidden
-					select parseId station
+				if isHidden station
+					select station
 				else
-					deselect parseId station
+					deselect station
 
 			bindClick = ->
 				$ "#{selectors.stations}", $element
@@ -113,6 +114,9 @@ angular
 				id = station.attr 'id'
 							.replace 'station-', ''
 				parseInt id
+
+			isHidden = (station_id) ->
+				station.is selectors.hidden
 
 			$scope.$watch 'selected', (newVal, oldVal) ->
 				init()

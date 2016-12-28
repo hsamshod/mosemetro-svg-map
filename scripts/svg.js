@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs) {
-      var bindClick, bindPinch, classes, deselect, deselectAll, deselectLine, deselectRelation, init, log, parseId, save, select, selectAll, selectLine, selectRelation, selectors, toggle;
+      var bindClick, bindPinch, classes, deselect, deselectAll, deselectLine, deselectRelation, init, isHidden, log, parseId, save, select, selectAll, selectLine, selectRelation, selectors, toggle;
       classes = {
         hidden: 'map-hidden'
       };
@@ -37,15 +37,17 @@ angular.module('svgmap', []).directive('svgMap', function() {
         results = [];
         for (j = 0, len = ref.length; j < len; j++) {
           station_id = ref[j];
-          results.push(select(station_id));
+          results.push(select(station_id, true));
         }
         return results;
       };
-      select = function(station_id) {
+      select = function(station_id, initing) {
         $(selectors.stations + "#station-" + station_id, $element).removeClass(classes.hidden);
         selectRelation(station_id);
         selectLine(station_id);
-        return $scope.selected.push(station_id);
+        if (!initing) {
+          return $scope.selected.push(station_id);
+        }
       };
       selectRelation = function(station_id) {
         return $(selectors.elements + ".station-" + station_id, $element).removeClass(classes.hidden);
@@ -97,10 +99,11 @@ angular.module('svgmap', []).directive('svgMap', function() {
         var elem, station;
         elem = $(event.target);
         station = elem.parent('g', $element);
-        if (station.is(selectors.hidden)) {
-          return select(parseId(station));
+        station = +station;
+        if (isHidden(station)) {
+          return select(station);
         } else {
-          return deselect(parseId(station));
+          return deselect(station);
         }
       };
       bindClick = function() {
@@ -128,6 +131,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
         var id;
         id = station.attr('id').replace('station-', '');
         return parseInt(id);
+      };
+      isHidden = function(station_id) {
+        return station.is(selectors.hidden);
       };
       $scope.$watch('selected', function(newVal, oldVal) {
         return init();
