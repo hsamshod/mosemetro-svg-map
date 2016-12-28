@@ -115,7 +115,7 @@ angular
 							.replace 'station-', ''
 				parseInt id
 
-			isHidden = (station_id) ->
+			isHidden = (station) ->
 				station.is selectors.hidden
 
 			$scope.$watch 'selected', (newVal, oldVal) ->

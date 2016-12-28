@@ -132,7 +132,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         id = station.attr('id').replace('station-', '');
         return parseInt(id);
       };
-      isHidden = function(station_id) {
+      isHidden = function(station) {
         return station.is(selectors.hidden);
       };
       $scope.$watch('selected', function(newVal, oldVal) {
