@@ -82,11 +82,13 @@ angular
 			toggle = (event) ->
 				elem = $ event.target
 				station = elem.parent 'g', $element
-
+				station_id = station.attr 'id'
+								.replace 'station-', ''
 				if isHidden station
-					select parseInt station
+
+					select parseInt station_id
 				else
-					deselect parseInt station
+					deselect parseInt station_id
 
 			bindClick = ->
 				$ "#{selectors.stations}", $element

@@ -96,13 +96,14 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return $(line_class, $element).addClass(classes.hidden);
       };
       toggle = function(event) {
-        var elem, station;
+        var elem, station, station_id;
         elem = $(event.target);
         station = elem.parent('g', $element);
+        station_id = station.attr('id').replace('station-', '');
         if (isHidden(station)) {
-          return select(parseInt(station));
+          return select(parseInt(station_id));
         } else {
-          return deselect(parseInt(station));
+          return deselect(parseInt(station_id));
         }
       };
       bindClick = function() {
