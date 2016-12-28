@@ -84,9 +84,9 @@ angular
 				station = elem.parent 'g', $element
 
 				if isHidden station
-					select station
+					select parseInt station
 				else
-					deselect station
+					deselect parseInt station
 
 			bindClick = ->
 				$ "#{selectors.stations}", $element
