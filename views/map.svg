@@ -150,7 +150,7 @@
                 <line class="station-140 station-195 st11" x1="490.3" y1="394.3" x2="490.3" y2="301.5"/>
                 <line class="station-195 station-194 st11" x1="460.6" y1="423.9" x2="490.3" y2="394.3"/>
                 <line class="station-194 station-192 st11" x1="368.6" y1="516" x2="460.6" y2="423.9"/>
-                <line class="station-192 station-59 st11" x1="345.5" y1="539" x2="368.6" y2="516"/>
+                <line class="station-192 station-159 st11" x1="345.5" y1="539" x2="368.6" y2="516"/>
                 <line class="station-159 station-65 st11" x1="284.9" y1="599.6" x2="345.5" y2="539"/>
             </g>
             <g id="line-9" data-name="serpuhovskaya">

@@ -5,7 +5,7 @@
   "authors": [
     "shamshod"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "www.ege-repetitor.ru",
   "ignore": [
@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "jquery.panzoom": "^3.2.2",
-    "angular": "^1.5.8",
     "underscore": "^1.8.3"
   }
 }
