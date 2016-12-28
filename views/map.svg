@@ -938,9 +938,9 @@
                 </g>
             </g>
             <g id="line-1">
-                <g class="line-1 station-216" id="station-216" data-name="bulvar-rossokovskogo">
+                <g class="line-1 station-145" id="station-145" data-name="bulvar-rokossovskogo">
                     <circle class="st22" cx="580.8" cy="135.2" r="4.7"/>
-                    <text transform="matrix(1 0 0 1 586.4429 137.7407)" class="st43 st44">БУЛЬВАР РОССОКОВСКОГО</text>
+                    <text transform="matrix(1 0 0 1 586.4429 137.7407)" class="st43 st44">БУЛЬВАР РОКОССОВСКОГО</text>
                 </g>
                 <g class="line-1 station-154" id="station-154" data-name="cherkizovskaya">
                     <circle class="st22" cx="580.7" cy="150" r="4.7"/>
@@ -959,7 +959,7 @@
                 <g class="line-1 station-55" id="station-55" data-name="krasnoselskaya">
                     <rect x="585.1" y="193.4" class="st4" width="134.1" height="11.7"/>
                     <circle class="st22" cx="580.5" cy="199.6" r="4.7"/>
-                    <text transform="matrix(1 0 0 1 586.9156 202.4072)" class="st43 st44">КРАСНОСЕЛЬВСКАЯ</text>
+                    <text transform="matrix(1 0 0 1 586.9156 202.4072)" class="st43 st44">КРАСНОСЕЛЬСКАЯ</text>
                 </g>
                 <g class="line-1 station-190" id="station-190" data-name="komsomolskaya">
                     <circle class="st22" cx="534.4" cy="270.5" r="4.7"/>
