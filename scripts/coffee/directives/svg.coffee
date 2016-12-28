@@ -82,7 +82,6 @@ angular
 			toggle = (event) ->
 				elem = $ event.target
 				station = elem.parent 'g', $element
-				station = +station
 
 				if isHidden station
 					select station

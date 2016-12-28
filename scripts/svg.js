@@ -99,7 +99,6 @@ angular.module('svgmap', []).directive('svgMap', function() {
         var elem, station;
         elem = $(event.target);
         station = elem.parent('g', $element);
-        station = +station;
         if (isHidden(station)) {
           return select(station);
         } else {
