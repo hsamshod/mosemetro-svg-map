@@ -3,9 +3,12 @@
 
 ## Dependencies
 ```
- angular ^1.5.8
+ jquery.panzoom ^3.2.2
+```
+
+## Dev dependencies
+```
  underscore ^1.8.3
- bootstrap ^3.3.7
  jquery.panzoom ^3.2.2
 ```
 

@@ -137,7 +137,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return console.log('save');
       };
       log = function(message) {
-        throw "svg-map: " + message;
+        throw "svg-metro: " + message;
       };
       parseId = function(station) {
         var id;
