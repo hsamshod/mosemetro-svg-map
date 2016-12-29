@@ -19,13 +19,14 @@ angular.module('svgmap', []).directive('svgMap', function() {
         hidden: '.map-hidden',
         shown: ':not(.map-hidden)'
       };
+      $scope.show_quick_selects = false;
       init = function() {
         deselectAll();
-        if ($scope.selected && $scope.selected.length) {
+        if ($scope.selected && $scope.selected.length && _.isArray($scope.selected)) {
           selectAll();
         }
         if ($attrs.hasOwnProperty('selectable')) {
-          bindClick();
+          bindClick() && ($scope.show_quick_selects = true);
         }
         if ($attrs.hasOwnProperty('scalable')) {
           return bindPinch();
@@ -123,13 +124,13 @@ angular.module('svgmap', []).directive('svgMap', function() {
       bindPinch = function() {
         $element.panzoom('destroy');
         $element.panzoom({
-          minScale: 1,
-          maxScale: 3,
+          minScale: 1.2,
+          maxScale: 5,
           contain: 'automatic',
           panOnlyWhenZoomed: true,
           animate: false
         });
-        return $element.panzoom('zoom', 2, {
+        return $element.panzoom('zoom', 2.5, {
           silent: true
         });
       };
@@ -137,7 +138,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return console.log('save');
       };
       log = function(message) {
-        throw "svg-metro: " + message;
+        throw "svg-map: " + message;
       };
       parseId = function(station) {
         var id;
@@ -166,6 +167,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
       $scope.$watch('selected', function(newVal, oldVal) {
         return init();
       });
+      $scope.selectAllStations = function() {
+        return selectAll();
+      };
       return init();
     }
   };

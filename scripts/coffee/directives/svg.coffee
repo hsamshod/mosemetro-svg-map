@@ -17,10 +17,12 @@ angular
 				hidden:         '.map-hidden'
 				shown:          ':not(.map-hidden)'
 
+			$scope.show_quick_selects = false
+
 			init = ->
 				deselectAll()
-				selectAll() if $scope.selected && $scope.selected.length
-				bindClick() if $attrs.hasOwnProperty 'selectable'
+				selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
+				bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
 				bindPinch() if $attrs.hasOwnProperty 'scalable'
 
 			selectAll = ->
@@ -95,12 +97,12 @@ angular
 			bindPinch = ->
 				$element.panzoom 'destroy'
 				$element.panzoom
-					minScale: 1
-					maxScale: 3
+					minScale: 1.2
+					maxScale: 5
 					contain: 'automatic'
 					panOnlyWhenZoomed: true
 					animate: false
-				$element.panzoom 'zoom', 2,
+				$element.panzoom 'zoom', 2.5,
 					silent: true
 
 			save = ->
@@ -127,13 +129,12 @@ angular
 			getStationClass = (station_id) ->
 				"station-#{station_id}"
 
-			hide = (elem) ->
-				elem.addClass classes.hidden
+			hide = (elem) -> elem.addClass classes.hidden
 
-			show = (elem) ->
-				elem.removeClass classes.hidden
+			show = (elem) -> elem.removeClass classes.hidden
 
-			$scope.$watch 'selected', (newVal, oldVal) ->
-				init()
+			$scope.$watch 'selected', (newVal, oldVal) -> init()
+
+			$scope.selectAllStations = -> selectAll()
 
 			init()
