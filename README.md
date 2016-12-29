@@ -36,7 +36,7 @@ angular.module 'some-module', ['svgmap', ...]
 
 move svg file to img/svg folder under webroot
 ```html
-mv bower_packages/egerep-svg-map/views/map.svg public/img/svg/map.svg
+cp bower_packages/egerep-svg-metro/views/map.svg public/img/svg/map.svg
 ```
 insert directive to page
 ```html
