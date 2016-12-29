@@ -107,7 +107,7 @@ angular
 				console.log 'save'
 
 			log = (message) ->
-				throw "svg-metro: #{message}"
+				throw "svg-map: #{message}"
 
 			parseId = (station) ->
 				if _.isString station
