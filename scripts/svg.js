@@ -164,7 +164,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       show = function(elem) {
         return elem.removeClass(classes.hidden);
       };
-      $scope.$watch('selected', function(newVal, oldVal) {
+      $scope.$watchCollection('selected', function(newVal, oldVal) {
         return init();
       });
       $scope.selectAllStations = function() {

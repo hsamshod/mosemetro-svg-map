@@ -133,7 +133,7 @@ angular
 
 			show = (elem) -> elem.removeClass classes.hidden
 
-			$scope.$watch 'selected', (newVal, oldVal) -> init()
+			$scope.$watchCollection 'selected', (newVal, oldVal) -> init()
 
 			$scope.selectAllStations = -> selectAll()
 
