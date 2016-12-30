@@ -1,8 +1,10 @@
 <html>
     <head>
-        <title>svg map</title>
+        <title>Svg Map</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src='vendor.js'></script>
         <script src='app.js'></script>
+        <link rel="stylesheet" href="styles/svg-metro.css">
         <meta name='viewport'
               content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
         >
@@ -28,15 +30,13 @@
     </head>
     <body ng-app='ege-rep'
           ng-controller='map'
-          ng-init='selected_stations = [61,95,161];'
+          ng-init='selected_stations = [1,2,3,4,5];'
     >
         <div class='container'>
             <span ng-click='showmap = showmap + 1'>show</span>
         </div>
         <div id="overlay" ng-show='showmap % 2'>
-            <svg-map selected='selected_stations'
-                     selectable
-            ></svg-map>
+            <svg-map selected='selected_stations' selectable></svg-map>
         </div>
     </body>
 </html>

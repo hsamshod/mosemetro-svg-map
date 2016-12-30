@@ -28,6 +28,10 @@ elixir(mix => {
     ]);
 });
 ```
+add css/scss to styles
+```scss
+@import egerep-svg-metro/styles/svg-metro.scss
+```
 
 add module as depency to your app
 ```coffee
@@ -50,7 +54,7 @@ insert directive to page
 <svg-map id="some-id" selected="[1, 2, 3]" scalable></svg-map> 
 ```
 
-`"selectable"` -  add selecting stations feature
+`"selectable"` -  add selecting stations feature, quick selectes supported
 
 ```html
 <svg-map id="some-id" selected="[1, 2, 3]" selectable></svg-map> 
