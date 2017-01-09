@@ -511,7 +511,7 @@
                     </g>
                     <g class="line-9 station-17" id="station-17" data-name="bibirevo">
                         <circle class="st20" cx="448.6" cy="87.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 397 90.8237)">БИБИРЕВО</text>
+                        <text transform="matrix(1 0 0 1 400 90.8237)">БИБИРЕВО</text>
                     </g>
                     <g class="line-9 station-89" id="station-89" data-name="otradnoe">
                         <circle class="st20" cx="448.6" cy="99.1" r="4.7"/>
@@ -788,11 +788,11 @@
                     </g>
                     <g class="line-2 station-9" id="station-9" data-name="aeroport">
                         <circle class="st18" cx="316.9" cy="216.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 267 219.8662)">АЭРОПОРТ</text>
+                        <text transform="matrix(1 0 0 1 268 219.8662)">АЭРОПОРТ</text>
                     </g>
                     <g class="line-2 station-36" id="station-36" data-name="dinamo">
                         <circle class="st18" cx="316.9" cy="228.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 272 230.9077)">ДИНАМО</text>
+                        <text transform="matrix(1 0 0 1 275 230.9077)">ДИНАМО</text>
                     </g>
                     <g class="line-2 station-196" id="station-196" data-name="belorusskaya">
                         <circle class="st18" cx="341.1" cy="251.9" r="4.7"/>
@@ -987,7 +987,7 @@
                     <g class="line-13 station-219" id="station-219" data-name="baltiyskaya">
                         <rect x="248.3" y="131.4" class="st4" width="59.3" height="10.8"/>
                         <circle class="st41" cx="317" cy="136.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 250.6612 140.0742)">БАЛТИЙСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 253 140.0742)">БАЛТИЙСКАЯ</text>
                     </g>
                     <g class="line-13 station-220" id="station-220" data-name="lixobory">
                         <circle class="st41" cx="349.7" cy="124.7" r="4.7"/>
@@ -1242,7 +1242,7 @@
                     </g>
                     <g class="line-12 station-22" id="station-22" data-name="bulvar-admirala-ushakova">
                         <circle class="st40" cx="451.1" cy="719.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 330 722.0723)">БУЛЬВАР ДМИТРИЯ УШАКОВА</text>
+                        <text transform="matrix(1 0 0 1 331 722.0723)">БУЛЬВАР ДМИТРИЯ УШАКОВА</text>
                     </g>
                     <g class="line-12 station-144" id="station-144" data-name="ulica-gorchakova">
                         <circle class="st40" cx="451.1" cy="730.4" r="4.7"/>
@@ -1250,7 +1250,7 @@
                     </g>
                     <g class="line-12 station-24" id="station-24" data-name="buninskaya-alleya">
                         <circle class="st40" cx="451.1" cy="741.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 367 744.4473)">БУНИНСКАЯ АЛЛЕЯ</text>
+                        <text transform="matrix(1 0 0 1 368 744.4473)">БУНИНСКАЯ АЛЛЕЯ</text>
                     </g>
                 </g>
             </g>
