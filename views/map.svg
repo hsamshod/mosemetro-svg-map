@@ -103,7 +103,7 @@
                 </g>
                 <g id="line-6" data-name="kalujsko-rijskaya">
                     <line class="station-20 station-26 station-1 station-2 st11" x1="489.9" y1="121.1" x2="489.9" y2="181.4"/>
-                    <line class="station-113 station-191 st11" x1="489.9" y1="205.4" x2="489.9" y2="243.6"/>
+                    <line class="station-5 station-191 st11" x1="489.9" y1="205.4" x2="489.9" y2="243.6"/>
                     <line class="station-191 station-129 st11" x1="490.3" y1="276.2" x2="490.3" y2="253.5"/>
                     <line class="station-129 station-140 st11" x1="490.3" y1="301.5" x2="490.3" y2="276.2"/>
                     <line class="station-140 station-48 st11" x1="490.3" y1="394.3" x2="490.3" y2="301.5"/>
@@ -696,11 +696,11 @@
                         <circle class="st23" cx="489.9" cy="175.6" r="4.7"/>
                     <text transform="matrix(1 0 0 1 496.8824 178.4072)">ВДНХ</text>
                     </g>
-                    <g class="line-6 station-5" id="station-5" data-name="rijskaya">
+                    <g class="line-6 station-113" id="station-113" data-name="rijskaya">
                         <circle class="st23" cx="489.9" cy="186.8" r="4.7"/>
                         <text transform="matrix(1 0 0 1 496.7886 189.5322)">РИЖСКАЯ</text>
                     </g>
-                    <g class="line-6 station-113" id="station-113" data-name="alekseevskaya">
+                    <g class="line-6 station-5" id="station-5" data-name="alekseevskaya">
                         <circle class="st23" cx="489.9" cy="197.9" r="4.7"/>
                         <text transform="matrix(1 0 0 1 496.6754 200.6572)">АЛЕКСЕЕВСКАЯ</text>
                     </g>
