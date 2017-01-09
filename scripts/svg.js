@@ -242,6 +242,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return results;
       };
       return (function() {
+        if ('string' === typeof $scope.selected) {
+          $scope.selected = $scope.selected.split(',');
+        }
         render();
         if ($attrs.hasOwnProperty('selectable')) {
           bindClick() && ($scope.show_quick_selects = true);
