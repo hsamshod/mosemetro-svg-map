@@ -696,13 +696,14 @@
                         <circle class="st23" cx="489.9" cy="175.6" r="4.7"/>
                     <text transform="matrix(1 0 0 1 496.8824 178.4072)">ВДНХ</text>
                     </g>
-                    <g class="line-6 station-113" id="station-113" data-name="rijskaya">
-                        <circle class="st23" cx="489.9" cy="186.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 496.7886 189.5322)">РИЖСКАЯ</text>
-                    </g>
                     <g class="line-6 station-5" id="station-5" data-name="alekseevskaya">
+                        <circle class="st23" cx="489.9" cy="186.8" r="4.7"/>
+                        <text transform="matrix(1 0 0 1 496.7886 189.5322)">АЛЕКСЕЕВСКАЯ</text>
+                    </g>
+                    <g class="line-6 station-113" id="station-113" data-name="rijskaya">
+
                         <circle class="st23" cx="489.9" cy="197.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 496.6754 200.6572)">АЛЕКСЕЕВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 496.6754 200.6572)">РИЖСКАЯ</text>
                     </g>
                     <g class="line-6 station-191" id="station-191" data-name="prospekt-mira">
                         <circle class="st23" cx="489.9" cy="240.5" r="4.7"/>
