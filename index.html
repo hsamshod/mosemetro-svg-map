@@ -30,7 +30,7 @@
     </head>
     <body ng-app='ege-rep'
           ng-controller='map'
-          ng-init='selected_stations = [1,2,3,4,5];'
+          ng-init='selected_stations = [1,2,3,4,5];selected_string="1,2,4,5,6";'
     >
         <div class='container'>
             <span ng-click='showmap = showmap + 1'>show</span>
@@ -38,5 +38,6 @@
         <div id="overlay" ng-show='showmap % 2'>
             <svg-map selected='selected_stations' selectable></svg-map>
         </div>
+        <svg-map selected='selected_string' selectable></svg-map>
     </body>
 </html>

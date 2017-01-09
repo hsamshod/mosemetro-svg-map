@@ -62,6 +62,9 @@ $svg-shown:				1;
   & #svg-qs-pink {
 	background: 	$svg-pink;
 	@include svg-showOnHover();
+	> div.svg-space {
+	  height: 		4 * $svg-qs-padding;
+	}
   }
 
   & #svg-qs-brown {
