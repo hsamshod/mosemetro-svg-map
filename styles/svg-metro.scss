@@ -16,7 +16,7 @@ $svg-white:			#FFFFFF;
 $svg-split-color: 	#595959;
 
 $svg-qs-padding:		12px;
-$svg-hidden:			0.2;
+$svg-hidden:			1;
 $svg-shown:				1;
 
 @mixin svg-hidden() {
@@ -71,6 +71,7 @@ $svg-shown:				1;
 	position: 		absolute;
 	top:			3 * $svg-qs-padding;
 	left:			3 * $svg-qs-padding;
+	height: 		4 * $svg-qs-padding;
 	& > div {
 	  background: 	$svg-brown;
 	  padding: 		$svg-qs-padding;
