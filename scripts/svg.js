@@ -7,7 +7,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       id: '@',
       selected: '='
     },
-    controller: function($scope, $element, $attrs) {
+    controller: function($scope, $element, $attrs, $timeout) {
       var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle;
       debug = false;
       classes = {
@@ -144,9 +144,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
         $.each(stations, function() {
           return toggle(this, toggle_mode);
         });
-        console.time('qs');
-        $scope.$apply();
-        return console.timeEnd('qs');
+        return $timeout(function() {
+          return $scope.$apply();
+        });
       };
       bindQuickSelect = function() {
         return $(selectors.quick_selects, $element).each(function() {
@@ -231,15 +231,15 @@ angular.module('svgmap', []).directive('svgMap', function() {
         }
       };
       $scope.selectAllStations = function() {
-        var j, len, ref, station;
-        console.time('select all stations');
+        var j, len, ref, results, station;
         $scope.selected = [];
         ref = getStation();
+        results = [];
         for (j = 0, len = ref.length; j < len; j++) {
           station = ref[j];
-          select(parseId(station));
+          results.push(select(parseId(station)));
         }
-        return console.timeEnd('select all stations');
+        return results;
       };
       return (function() {
         render();

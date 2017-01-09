@@ -7,7 +7,7 @@ angular
 		scope:
 			id:         '@'
 			selected:   '='
-		controller: ($scope, $element, $attrs) ->
+		controller: ($scope, $element, $attrs, $timeout) ->
 			debug     = false
 			classes   =
 				hidden:                 'map-hidden'
@@ -117,9 +117,8 @@ angular
 				toggle_mode = if stations.length is shownCount stations then 0 else 1
 				$.each stations, ->
 					toggle @, toggle_mode
-				console.time 'qs'
-				$scope.$apply()
-				console.timeEnd 'qs'
+				$timeout ->
+					$scope.$apply()
 
 			bindQuickSelect = ->
 				$ selectors.quick_selects, $element
@@ -190,10 +189,8 @@ angular
 			log = (message) -> console.log "svg-map: #{message}" if debug
 
 			$scope.selectAllStations = ->
-				console.time 'select all stations'
 				$scope.selected = []
 				select parseId station for station in getStation()
-				console.timeEnd 'select all stations'
 
 			do ->
 				render()
