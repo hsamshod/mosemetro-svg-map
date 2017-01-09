@@ -1260,7 +1260,7 @@
         <div id="svg-select-all"><span class="link-like" ng-click="selectAllStations()" >вся Москва</span></div>
         <div id="svg-quick-selects" class="text-center">
             <div>
-                <!--data-coordinates: line_id-station_id -->
+                <!--data-coordinates: line_id-station_id-mode -->
                 <!--mode(0 - top, 1 - bottom) -->
                 <div class="svg-rotator" data-coordinates="1-190-0" id="svg-qs-red-top"><div></div></div>
                 <div class="svg-rotator" data-coordinates="1-189-1" id="svg-qs-red-bottom"><div></div></div>
@@ -1283,8 +1283,8 @@
                             <div class="svg-space"></div>
                         </div>
                     </div>
-                    <div id="svg-qs-brown" data-coordinates="5-83-3">
-                        <div></div>
+                    <div id="svg-qs-brown">
+                        <div data-coordinates="5-83-3"></div>
                     </div>
                 </div>
             </div>

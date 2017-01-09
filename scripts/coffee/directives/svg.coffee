@@ -26,22 +26,19 @@ angular
 										]
 			$scope.show_quick_selects = false
 
-
-			init = ->
+			render = ->
 				deselectAll()
 				selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
-				bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
-				bindPinch() if $attrs.hasOwnProperty 'scalable'
 
 			selectAll = ->
 				select station_id, true for station_id in $scope.selected
 
-			select = (station_id, initing) ->
+			select = (station_id) ->
 				show getStation station_id
 				selectRelation station_id
 				selectLine station_id
 				log station_id
-				$scope.selected.push station_id if not initing and $scope.selected.indexOf(station_id) is -1
+				$scope.selected.push station_id if $scope.selected.indexOf(station_id) is -1
 
 			selectRelation = (station_id) ->
 				show $ "#{selectors.elements}.station-#{station_id}", $element
@@ -71,6 +68,7 @@ angular
 				hide getStation station_id
 				deselectRelation station_id
 				deselectLine station_id
+				$scope.selected = _.without $scope.selected, station_id
 
 			deselectRelation = (station_id) ->
 				relation = $ "#{selectors.elements}.station-#{station_id}", $element
@@ -119,6 +117,9 @@ angular
 				toggle_mode = if stations.length is shownCount stations then 0 else 1
 				$.each stations, ->
 					toggle @, toggle_mode
+				console.time 'qs'
+				$scope.$apply()
+				console.timeEnd 'qs'
 
 			bindQuickSelect = ->
 				$ selectors.quick_selects, $element
@@ -184,7 +185,7 @@ angular
 
 			show = (elem) -> elem.removeClass classes.hidden
 
-			$scope.$watchCollection 'selected', (newVal, oldVal) -> init()
+			$scope.$watchCollection 'selected', (newVal, oldVal) -> render()
 
 			log = (message) -> console.log "svg-map: #{message}" if debug
 
@@ -194,4 +195,7 @@ angular
 				select parseId station for station in getStation()
 				console.timeEnd 'select all stations'
 
-			init()
+			do ->
+				render()
+				bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
+				bindPinch() if $attrs.hasOwnProperty 'scalable'
