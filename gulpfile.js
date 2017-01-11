@@ -12,7 +12,6 @@ bower_packages = [
     'scripts/bower/jquery/dist/jquery.slim.min.js',
     'scripts/bower/angular/angular.min.js',
     'scripts/bower/underscore/underscore-min.js',
-    'scripts/bower/pinchzoom/src/pinchzoom.js',
     'scripts/bower/jquery.panzoom/dist/jquery.panzoom.js',
     'scripts/svg.js'
 ];

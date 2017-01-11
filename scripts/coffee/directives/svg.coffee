@@ -136,14 +136,14 @@ angular
 								handleQuickSelect line_id, station_id, mode
 
 			bindPinch = ->
-				$element.panzoom 'destroy'
-				$element.panzoom
+				scalableElement = $element.children('div').children('svg')
+				scalableElement.panzoom 'destroy'
+				scalableElement.panzoom
 					minScale: 1.2
 					maxScale: 5
 					contain: 'automatic'
 					panOnlyWhenZoomed: true
-					animate: false
-				$element.panzoom 'zoom', 2.5,
+				scalableElement.panzoom 'zoom', 2.5,
 					silent: true
 
 			toggle = (station, force) ->
