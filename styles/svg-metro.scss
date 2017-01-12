@@ -1,19 +1,51 @@
-$svg-red: 			#CA5948;
-$svg-green:			#528C5D;
-$svg-blue: 			#5A68A0;
-$svg-light-blue: 	#4BABD8;
-$svg-brown: 		#9B6144;
-$svg-orange: 		#D78A4B;
-$svg-purple: 		#A25980;
-$svg-yellow: 		#EBE457;
-$svg-gray: 			#838382;
-$svg-lime: 			#79B872;
-$svg-teal:			#4C7EA9;
-$svg-blue-gray: 	#B0CCCB;
-$svg-pink: 			#E2A6A6;
+$colors : (
+  svg-red: 				#CA5948,
+  svg-red-hidden: 		#F5DEDA,
 
-$svg-white:			#FFFFFF;
-$svg-split-color: 	#595959;
+  svg-green:			#528C5D,
+  svg-green-hidden:		#DCE8DF,
+
+  svg-blue: 			#5A68A0,
+  svg-blue-hidden: 		#DEE1EC,
+
+  svg-light-blue: 		#4BABD8,
+  svg-light-blue-hidden: #DBEEF7,
+
+  svg-brown: 			#9B6144,
+  svg-brown-hidden: 	#EBDFD9,
+
+  svg-orange: 			#D78A4B,
+  svg-orange-hidden: 	#F7E8DB,
+
+  svg-purple: 			#A25980,
+  svg-purple-hidden: 	#ECDEE6,
+
+  svg-yellow: 			#EBE457,
+  svg-yellow-hidden: 	#FBFADD,
+
+  svg-gray: 			#838382,
+  svg-gray-hidden: 		#E6E6E6,
+
+  svg-lime: 			#79B872,
+  svg-lime-hidden: 		#E4F1E3,
+
+  svg-teal:				#4C7EA9,
+  svg-teal-hidden:		#DBE5EE,
+
+  svg-blue-gray: 		#B0CCCB,
+  svg-blue-gray-hidden: #EFF5F5,
+
+  svg-pink: 			#E2A6A6,
+  svg-pink-hidden: 		#F9EDED,
+
+  svg-split-color: 		#595959,
+  svg-split-color-hidden: #E2E2E2,
+
+  svg-black:			#000,
+  svg-black-hidden:		#CCC,
+
+  svg-white:			#FFFFFF,
+);
 
 $svg-qs-padding:		12px;
 $svg-hidden:			0.2;
@@ -27,20 +59,37 @@ $svg-shown:				1;
   opacity: $svg-shown;
 }
 
-@mixin svg-showOnHover() {
-  @include svg-hidden();
-  &:hover {
-	cursor: pointer;
-	@include svg-shown();
+@mixin stroke($colorName) {
+  stroke: map-get($colors, $colorName);
+  &.map-hidden {
+	stroke: map-get($colors, unquote("#{$colorName}-hidden"));
+  }
+}
+
+@mixin fill($colorName) {
+  .map-hidden & {
+	fill: map-get($colors, unquote("#{$colorName}-hidden"));
+  }
+  fill: map-get($colors, $colorName);
+}
+
+@mixin background($colorName) {
+  background: map-get($colors, $colorName);
+}
+
+@mixin backgroundWithHover($colorName) {
+  //@error unquote("#{$colorName}-hidden");
+  cursor: pointer;
+  @include background(unquote("#{$colorName}-hidden"));
+  &:hover{
+	@include background($colorName);
   }
 }
 
 @mixin svg-transform($color, $level) {
   transform: rotate(#{-63 + 24 * $level}deg); // 24 = 360 / 15
   & > div {
-	cursor: pointer;
-	background-color: $color;
-	@include svg-showOnHover();
+	@include backgroundWithHover($color);
   }
 }
 
@@ -56,12 +105,11 @@ $svg-shown:				1;
   }
 
   & .svg-space {
-	background: 	$svg-white;
+	@include background('svg-white');
   }
 
   & #svg-qs-pink {
-	background: 	$svg-pink;
-	@include svg-showOnHover();
+	@include backgroundWithHover('svg-pink');
 	> div.svg-space {
 	  height: 		4 * $svg-qs-padding;
 	}
@@ -73,9 +121,8 @@ $svg-shown:				1;
 	left:			3 * $svg-qs-padding;
 	height: 		4 * $svg-qs-padding;
 	& > div {
-	  background: 	$svg-brown;
+	  @include backgroundWithHover('svg-brown');
 	  padding: 		$svg-qs-padding;
-	  @include svg-showOnHover();
 	}
   }
 
@@ -86,57 +133,57 @@ $svg-shown:				1;
 	left: 			-1 * $svg-qs-padding;
 
 	&#svg-qs-red-top {
-	  @include svg-transform($svg-red, 2);
+	  @include svg-transform('svg-red', 2);
 	}
 	&#svg-qs-red-bottom {
-	  @include svg-transform($svg-red, 10);
+	  @include svg-transform('svg-red', 10);
 	}
 
 	&#svg-qs-green-top {
-	  @include svg-transform($svg-green, 7)
+	  @include svg-transform('svg-green', 7)
 	}
 	&#svg-qs-green-bottom {
-	  @include svg-transform($svg-green, 14)
+	  @include svg-transform('svg-green', 14)
 	}
 
 	&#svg-qs-blue-top {
-	  @include svg-transform($svg-blue, 3)
+	  @include svg-transform('svg-blue', 3)
 	}
 	&#svg-qs-blue-bottom {
-	  @include svg-transform($svg-blue, 11)
+	  @include svg-transform('svg-blue', 11)
 	}
 
 	&#svg-qs-light-blue-bottom {
-	  @include svg-transform($svg-light-blue, 12)
+	  @include svg-transform('svg-light-blue', 12)
 	}
 
 	&#svg-qs-orange-top {
-	  @include svg-transform($svg-orange, 1)
+	  @include svg-transform('svg-orange', 1)
 	}
 	&#svg-qs-orange-bottom {
-	  @include svg-transform($svg-orange, 9)
+	  @include svg-transform('svg-orange', 9)
 	}
 
 	&#svg-qs-purple-top {
-	  @include svg-transform($svg-purple, 5)
+	  @include svg-transform('svg-purple', 5)
 	}
 	&#svg-qs-purple-bottom {
-	  @include svg-transform($svg-purple, 13)
+	  @include svg-transform('svg-purple', 13)
 	}
 
 	&#svg-qs-yellow-top {
-	  @include svg-transform($svg-yellow, 4)
+	  @include svg-transform('svg-yellow', 4)
 	}
 
 	&#svg-qs-gray-top {
-	  @include svg-transform($svg-gray, 0)
+	  @include svg-transform('svg-gray', 0)
 	}
 	&#svg-qs-gray-bottom {
-	  @include svg-transform($svg-gray, 8)
+	  @include svg-transform('svg-gray', 8)
 	}
 
 	&#svg-qs-lime-bottom {
-	  @include svg-transform($svg-lime, 6);
+	  @include svg-transform('svg-lime', 6);
 	}
 
 	& > div {
@@ -150,52 +197,59 @@ $svg-shown:				1;
 
 #svg-select-all { margin: 10px auto; }
 
-.map-shown{ @include svg-shown(); }
-.map-hidden{ @include svg-hidden(); }
-
-#neutrals > path {fill:$svg-white;}
-#elements > path {fill:none;stroke:$svg-split-color;stroke-miterlimit:10;}
+#neutrals > path {@include fill('svg-white');}
+#elements > path {@include stroke('svg-split-color');fill:none;stroke-miterlimit:10;}
 #stations > g > g {cursor:pointer}
-#stations > g > g > rect {opacity:0.8;fill:$svg-white;}
-#stations > g > g > text {font-family:Arial;font-weight:bold;font-size:0.5em;}
 
-.st2{fill:none;stroke:$svg-pink;stroke-width:7;stroke-miterlimit:10;}
-.st41{fill:$svg-pink}
+#stations > g > g > rect {@include fill('svg-white');opacity:0.8;}
+#stations > g > g.map-hidden > rect {@include fill('svg-white');opacity:0.2;}
 
-.st0{fill:none;stroke:$svg-yellow;stroke-width:7;stroke-miterlimit:10;}
-.st35{fill:$svg-yellow;}
+#stations > g > g {
+  > text {
+	@include fill('svg-black');font-family:Arial;font-weight:bold;font-size:0.5em;
+  }
+  &.map-hidden >text {
+	@include fill('svg-black-hidden');
+  }
+}
 
-.st3{fill:none;stroke:$svg-teal;stroke-width:7;stroke-miterlimit:10;}
-.st37{fill:$svg-teal;}
+.st2{@include stroke('svg-pink');fill:none;stroke-width:7;stroke-miterlimit:10;  }
+.st41{@include fill('svg-pink');}
 
-.st5{fill:none;stroke:$svg-blue;stroke-width:7;stroke-miterlimit:10;}
-.st25{fill:$svg-blue;}
+.st0{@include stroke('svg-yellow');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st35{@include fill('svg-yellow');}
 
-.st6{fill:none;stroke:$svg-red;stroke-width:7;stroke-miterlimit:10;}
-.st22{fill:$svg-red;}
+.st3{@include stroke('svg-teal');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st37{@include fill('svg-teal');}
 
-.st7{fill:none;stroke:$svg-light-blue;stroke-width:7;stroke-miterlimit:10;}
-.st32{fill:#40B3E7;}
+.st5{@include stroke('svg-blue');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st25{@include fill('svg-blue');}
 
-.st9{fill:none;stroke:$svg-gray;stroke-width:7;stroke-miterlimit:10;}
-.st20{fill:$svg-gray;}
+.st6{@include stroke('svg-red');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st22{@include fill('svg-red');}
 
-.st10{fill:none;stroke:$svg-lime;stroke-width:7;stroke-miterlimit:10;}
-.st24{fill:$svg-lime;}
+.st7{@include stroke('svg-light-blue');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st32{@include fill('svg-light-blue');}
 
-.st11{fill:none;stroke:$svg-orange;stroke-width:7;stroke-miterlimit:10;}
-.st23{fill:$svg-orange;}
+.st9{@include stroke('svg-gray');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st20{@include fill('svg-gray');}
 
-.st15{fill:none;stroke:$svg-purple;stroke-width:7;stroke-miterlimit:10;}
-.st21{fill:$svg-purple;}
+.st10{@include stroke('svg-lime');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st24{@include fill('svg-lime');}
 
-.st12{fill:none;stroke:$svg-green;stroke-width:7;stroke-miterlimit:10;}
-.st18{fill:$svg-green;}
+.st11{@include stroke('svg-orange');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st23{@include fill('svg-orange');}
 
-.st16{fill:none;stroke:$svg-brown;stroke-width:7;stroke-miterlimit:10;}
-.st19{fill:$svg-brown;}
+.st15{@include stroke('svg-purple');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st21{@include fill('svg-purple');}
 
-.st13{fill:$svg-white;stroke:$svg-white;stroke-miterlimit:10;}
+.st12{@include stroke('svg-green');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st18{@include fill('svg-green');}
 
-.st8{fill:none;stroke:$svg-blue-gray;stroke-width:7;stroke-miterlimit:10;}
-.st40{fill:$svg-blue-gray;}
+.st16{@include stroke('svg-brown');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st19{@include fill('svg-brown');}
+
+.st13{@include fill('svg-white');@include stroke('svg-white');fill:none;stroke-miterlimit:10;}
+
+.st8{@include stroke('svg-blue-gray');fill:none;stroke-width:7;stroke-miterlimit:10;}
+.st40{@include fill('svg-blue-gray');}
