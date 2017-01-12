@@ -1,4 +1,4 @@
-<div class="svg-map" style="height:100%;width:210%;">
+<div class="svg-map" style="height:100%;" ng-class="{'selectable-map': is_scalable}">
     <div ng-class="{'col-sm-9':show_quick_selects}">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 60 850 700" style="background:#fff;width:100%;height:100%;" xml:space="preserve">
             <g id="lines">

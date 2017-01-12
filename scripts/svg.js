@@ -35,7 +35,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
           bindClick() && ($scope.show_quick_selects = true);
         }
         if ($attrs.hasOwnProperty('scalable')) {
-          return bindPinch();
+          return bindPinch() && ($scope.is_scalable = true);
         }
       };
       selectAll = function() {
