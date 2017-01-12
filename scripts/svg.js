@@ -24,6 +24,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       $scope.show_quick_selects = false;
       render = function() {
+        if ('string' === typeof $scope.selected) {
+          $scope.selected = $scope.selected.split(',');
+        }
         deselectAll();
         if ($scope.selected && $scope.selected.length && _.isArray($scope.selected)) {
           return selectAll();
@@ -241,9 +244,6 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return results;
       };
       return (function() {
-        if ('string' === typeof $scope.selected) {
-          $scope.selected = $scope.selected.split(',');
-        }
         render();
         if ($attrs.hasOwnProperty('selectable')) {
           bindClick() && ($scope.show_quick_selects = true);

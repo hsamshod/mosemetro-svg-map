@@ -27,6 +27,7 @@ angular
 			$scope.show_quick_selects = false
 
 			render = ->
+				$scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
 				deselectAll()
 				selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
 
@@ -192,7 +193,6 @@ angular
 				select parseId station for station in getStation()
 
 			do ->
-				$scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
 				render()
 				bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
 				bindPinch() if $attrs.hasOwnProperty 'scalable'
