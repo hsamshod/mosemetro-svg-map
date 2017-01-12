@@ -146,7 +146,7 @@ angular
 					maxScale: 5
 					contain: 'automatic'
 					panOnlyWhenZoomed: true
-				$element.panzoom 'zoom', 2.5,
+				$element.panzoom 'zoom', 1.5,
 					silent: true
 
 			toggle = (station, force) ->

@@ -178,7 +178,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
           contain: 'automatic',
           panOnlyWhenZoomed: true
         });
-        return $element.panzoom('zoom', 2.5, {
+        return $element.panzoom('zoom', 1.5, {
           silent: true
         });
       };
