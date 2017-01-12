@@ -24,20 +24,18 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       $scope.show_quick_selects = false;
       render = function() {
-        if ($scope.selected) {
-          if ($attrs.hasOwnProperty('selectable')) {
-            bindClick() && ($scope.show_quick_selects = true);
-          }
-          if ($attrs.hasOwnProperty('scalable')) {
-            bindPinch();
-          }
-          if ('string' === typeof $scope.selected) {
-            $scope.selected = $scope.selected.split(',');
-          }
-          deselectAll();
-          if ($scope.selected && $scope.selected.length && _.isArray($scope.selected)) {
-            return selectAll();
-          }
+        if ('string' === typeof $scope.selected) {
+          $scope.selected = $scope.selected.split(',');
+        }
+        deselectAll();
+        if ($scope.selected && $scope.selected.length && _.isArray($scope.selected)) {
+          selectAll();
+        }
+        if ($attrs.hasOwnProperty('selectable')) {
+          bindClick() && ($scope.show_quick_selects = true);
+        }
+        if ($attrs.hasOwnProperty('scalable')) {
+          return bindPinch();
         }
       };
       selectAll = function() {
