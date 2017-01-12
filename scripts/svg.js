@@ -162,16 +162,14 @@ angular.module('svgmap', []).directive('svgMap', function() {
         });
       };
       bindPinch = function() {
-        var scalableElement;
-        scalableElement = $element.children('div').children('svg');
-        scalableElement.panzoom('destroy');
-        scalableElement.panzoom({
+        $element.panzoom('destroy');
+        $element.panzoom({
           minScale: 1.2,
           maxScale: 5,
           contain: 'automatic',
           panOnlyWhenZoomed: true
         });
-        return scalableElement.panzoom('zoom', 2.5, {
+        return $element.panzoom('zoom', 2.5, {
           silent: true
         });
       };
