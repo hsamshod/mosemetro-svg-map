@@ -254,6 +254,13 @@ $svg-shown:				1;
 .st8{@include stroke('svg-blue-gray');fill:none;stroke-width:7;stroke-miterlimit:10;}
 .st40{@include fill('svg-blue-gray');}
 
-.selectable-map {
-  width:205%;
+.scalable-map {
+  display: inline-block;
+  & > div {
+	display: inline-block;
+	height: 100%;
+	& svg {
+	  width: auto !important;
+	}
+  }
 }

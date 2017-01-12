@@ -142,12 +142,11 @@ angular
 			bindPinch = ->
 				$element.panzoom 'destroy'
 				$element.panzoom
-					minScale: 1.2
+					minScale: 1
 					maxScale: 5
+					increment: 1.5
 					contain: 'automatic'
-					panOnlyWhenZoomed: true
-				$element.panzoom 'zoom', 1.5,
-					silent: true
+					panOnlyWhenZoomed: false
 
 			toggle = (station, force) ->
 				if _.isNumber force

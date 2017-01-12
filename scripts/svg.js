@@ -172,14 +172,12 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       bindPinch = function() {
         $element.panzoom('destroy');
-        $element.panzoom({
-          minScale: 1.2,
+        return $element.panzoom({
+          minScale: 1,
           maxScale: 5,
+          increment: 1.5,
           contain: 'automatic',
-          panOnlyWhenZoomed: true
-        });
-        return $element.panzoom('zoom', 1.5, {
-          silent: true
+          panOnlyWhenZoomed: false
         });
       };
       toggle = function(station, force) {
