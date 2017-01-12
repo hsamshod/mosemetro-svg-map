@@ -27,9 +27,12 @@ angular
 			$scope.show_quick_selects = false
 
 			render = ->
-				$scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
-				deselectAll()
-				selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
+				if $scope.selected
+					bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
+					bindPinch() if $attrs.hasOwnProperty 'scalable'
+					$scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
+					deselectAll()
+					selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
 
 			selectAll = ->
 				select station_id, true for station_id in $scope.selected
@@ -192,7 +195,4 @@ angular
 				$scope.selected = []
 				select parseId station for station in getStation()
 
-			do ->
-				render()
-				bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
-				bindPinch() if $attrs.hasOwnProperty 'scalable'
+			render()
