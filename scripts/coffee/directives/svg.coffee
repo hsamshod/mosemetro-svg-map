@@ -118,6 +118,8 @@ angular
 						for station_id in selectors.inner_station_ids
 							stations.push getStation(station_id)[0]
 
+				$.merge stations, related if (related = getRelatedStations stations).length
+
 				toggle_mode = if stations.length is shownCount stations then 0 else 1
 				$.each stations, ->
 					toggle @, toggle_mode
@@ -144,7 +146,7 @@ angular
 				$element.panzoom
 					minScale: 1
 					maxScale: 5
-					increment: 1.5
+					increment: 1.2
 					contain: 'automatic'
 					panOnlyWhenZoomed: false
 
@@ -172,6 +174,16 @@ angular
 				else
 					$ "#{selectors.stations}", $element
 
+			getRelatedStations = (stations) ->
+				related_stations = []
+
+				_.each stations, (station) ->
+					station_id  = parseId station
+					relation = $ "#{selectors.elements}.station-#{station_id}", $element
+					if relation.length
+						_.each relation[0].classList, (relation_class) ->
+							related_stations.push getStation(parseId relation_class)[0] if (relation_class != getStationClass station_id) and relation_class.match(/station\-[0-9]+$/)
+				related_stations
 
 			isHidden = (station) -> station.is selectors.hidden
 
@@ -191,7 +203,10 @@ angular
 			log = (message) -> console.log "svg-map: #{message}" if debug
 
 			$scope.selectAllStations = ->
-				$scope.selected = []
-				select parseId station for station in getStation()
+				if $scope.selected.length is getStation().length
+					$scope.selected = [] #empty
+				else
+					$scope.selected = [] #empty before selecting
+					select parseId station for station in getStation()
 
 			render()

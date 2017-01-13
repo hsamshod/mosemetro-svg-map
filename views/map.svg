@@ -182,19 +182,19 @@
                 <g id="line-8">
                     <g class="line-8 station-180" id="station-180" data-name="novokosino">
                         <circle class="st35" cx="728.9" cy="338.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 736.2359 340.9492)">НОВОКОСИНО</text>
+                        <text transform="matrix(1 0 0 1 739 340.9492)">НОВОКОСИНО</text>
                     </g>
                     <g class="line-8 station-81" id="station-81" data-name="novogireevo">
                         <circle class="st35" cx="728.9" cy="349.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 735.8375 352.3242)">НОВОГИРЕЕВО</text>
+                        <text transform="matrix(1 0 0 1 739 352.3242)">НОВОГИРЕЕВО</text>
                     </g>
                     <g class="line-8 station-96" id="station-96" data-name="perovo">
                         <circle class="st35" cx="728.9" cy="360.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 735.9312 363.6992)">ПЕРОВО</text>
+                        <text transform="matrix(1 0 0 1 739 363.6992)">ПЕРОВО</text>
                     </g>
                     <g class="line-8 station-160" id="station-160" data-name="shosse-entuziastov">
                         <circle class="st35" cx="703.4" cy="386.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 713.4703 388.5742)">ШОССЕ ЭНТУЗИАСТОВ</text>
+                        <text transform="matrix(1 0 0 1 713.4 388.5742)">ШОССЕ ЭНТУЗИАСТОВ</text>
                     </g>
                     <g class="line-8 station-1" id="station-1" data-name="aviamotornaya">
                         <circle class="st35" cx="640.9" cy="386.8" r="4.7"/>
@@ -213,26 +213,26 @@
                     <g class="line-4 station-62" id="station-62" data-name="kuncevskaya">
                         <rect x="131.7" y="310.4" class="st4" width="58.6" height="10.6"/>
                         <circle class="st32" cx="121.5" cy="315.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 132.8873 318.7407)">КУНЦЕВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 131.6 318.7407)">КУНЦЕВСКАЯ</text>
                     </g>
                     <g class="line-4 station-99" id="station-99" data-name="pionerskaya">
                         <rect x="127.8" y="326" class="st4" width="86.1" height="10.7"/>
                         <circle class="st32" cx="121.6" cy="331" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 129.0132 334.0742)">ПИОНЕРСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 131.6 334.0742)">ПИОНЕРСКАЯ</text>
                     </g>
                     <g class="line-4 station-149" id="station-149" data-name="filevskiy-park">
                         <rect x="127.8" y="336.7" class="st4" width="86.1" height="10.6"/>
                         <circle class="st32" cx="121.6" cy="342.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 128.9078 345.3345)">ФИЛЕВСКИЙ ПАРК</text>
+                        <text transform="matrix(1 0 0 1 131.6 345.3345)">ФИЛЕВСКИЙ ПАРК</text>
                     </g>
                     <g class="line-4 station-11" id="station-11" data-name="bagritionovskaya">
                         <rect x="127.8" y="347.2" class="st4" width="86.1" height="10.2"/>
                         <circle class="st32" cx="121.6" cy="353.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 127.5015 356.0742)">БАГРАТИОНОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 131.6 356.0742)">БАГРАТИОНОВСКАЯ</text>
                     </g>
                     <g class="line-4 station-150" id="station-150" data-name="fili">
                         <circle class="st32" cx="121.6" cy="364.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 129.2125 367.0742)">ФИЛИ</text>
+                        <text transform="matrix(1 0 0 1 131.6 367.0742)">ФИЛИ</text>
                     </g>
                     <g class="line-4 station-64" id="station-64" data-name="kutuzovskaya">
                         <circle class="st32" cx="155.2" cy="398.8" r="4.7"/>
@@ -263,35 +263,35 @@
                 <g id="line-9">
                     <g class="line-9 station-6" id="station-6" data-name="altufevo">
                         <circle class="st20" cx="448.6" cy="76.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 393 79.7402)">АЛТУФЬЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 438 79.7402)">АЛТУФЬЕВО</text>
                     </g>
                     <g class="line-9 station-17" id="station-17" data-name="bibirevo">
                         <circle class="st20" cx="448.6" cy="87.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 400 90.8237)">БИБИРЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 438 90.8237)">БИБИРЕВО</text>
                     </g>
                     <g class="line-9 station-89" id="station-89" data-name="otradnoe">
                         <circle class="st20" cx="448.6" cy="99.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 398 101.9072)">ОТРАДНОЕ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 438 101.9072)">ОТРАДНОЕ</text>
                     </g>
                     <g class="line-9 station-27" id="station-27" data-name="vladikino">
                         <circle class="st20" cx="448.5" cy="127" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 390 130.5732)">ВЛАДЫКИНО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 438 130.5732)">ВЛАДЫКИНО</text>
                     </g>
                     <g class="line-9 station-97" id="station-97" data-name="p-razumovskaya">
                         <circle class="st20" cx="448.5" cy="171.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 375 173)">П-РАЗУМОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 438 173)">П-РАЗУМОВСКАЯ</text>
                     </g>
                     <g class="line-9 station-136" id="station-136" data-name="timiryazevskaya">
                         <circle class="st20" cx="422.6" cy="201.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 352 203.6572)">ТИМИРЯЗЕВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 412 203.6572)">ТИМИРЯЗЕВСКАЯ</text>
                     </g>
                     <g class="line-9 station-37" id="station-37" data-name="dmitrovskaya">
                         <circle class="st20" cx="422.9" cy="212.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 359 215.1572)">ДМИТРОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 412 215.1572)">ДМИТРОВСКАЯ</text>
                     </g>
                     <g class="line-9 station-116" id="station-116" data-name="savelovskaya">
                         <circle class="st20" cx="422.9" cy="223.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 359 226.6572)">САВЕЛОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 412 226.6572)">САВЕЛОВСКАЯ</text>
                     </g>
                     <g class="line-9 station-74" id="station-74" data-name="mendeleevskaya">
                         <circle class="st20" cx="422.9" cy="238.6" r="4.7"/>
@@ -310,51 +310,51 @@
                     </g>
                     <g class="line-9 station-120" id="station-120" data-name="serpuxovskaya">
                         <circle class="st20" cx="451.1" cy="527.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 462.1929 530.0732)">СЕРПУХОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 461.1 530.0732)">СЕРПУХОВСКАЯ</text>
                     </g>
                     <g class="line-9 station-139" id="station-139" data-name="tulskaya">
                         <circle class="st20" cx="451.1" cy="542.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 404 545.5732)">ТУЛЬСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 545.5732)">ТУЛЬСКАЯ</text>
                     </g>
                     <g class="line-9 station-78" id="station-78" data-name="nagatinskaya">
                         <circle class="st20" cx="451.1" cy="554" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 389.2 556.6948)">НАГАТИНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 556.6948)">НАГАТИНСКАЯ</text>
                     </g>
                     <g class="line-9 station-79" id="station-79" data-name="nagornaya">
                         <circle class="st20" cx="451.1" cy="565.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 401.2 567.8164)">НАГОРНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 567.8164)">НАГОРНАЯ</text>
                     </g>
                     <g class="line-9 station-80" id="station-80" data-name="naximovskiy-prospаekt">
                         <circle class="st20" cx="451.1" cy="576.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 345 579.1982)">НАХИМОВСКИЙ ПРОСПЕКТ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 579.1982)">НАХИМОВСКИЙ ПРОСПЕКТ</text>
                     </g>
                     <g class="line-9 station-118" id="station-118" data-name="sevastopolskaya">
                         <circle class="st20" cx="451.3" cy="591.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 367 593.3232)">СЕВАСТОПОЛЬСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 593.3232)">СЕВАСТОПОЛЬСКАЯ</text>
                     </g>
                     <g class="line-9 station-155" id="station-155" data-name="chertanovskaya">
                         <circle class="st20" cx="451.1" cy="605.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 382 608.1982)">ЧЕРТАНОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 608.1982)">ЧЕРТАНОВСКАЯ</text>
                     </g>
                     <g class="line-9 station-165" id="station-165" data-name="yujnaya">
                         <circle class="st20" cx="451.1" cy="616.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 411 619.4424)">ЮЖНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 619.4424)">ЮЖНАЯ</text>
                     </g>
                     <g class="line-9 station-105" id="station-105" data-name="prajskaya">
                         <circle class="st20" cx="451.1" cy="627.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 400 630.6865)">ПРАЖСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 630.6865)">ПРАЖСКАЯ</text>
                     </g>
                     <g class="line-9 station-143" id="station-143" data-name="ulica-akademika-yangelya">
                         <circle class="st20" cx="451.1" cy="653.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 337 656.9287)">УЛИЦА АКАДЕМИКА ЯНГЕЛЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 656.9287)">УЛИЦА АКАДЕМИКА ЯНГЕЛЯ</text>
                     </g>
                     <g class="line-9 station-7" id="station-7" data-name="annino">
                         <circle class="st20" cx="451.1" cy="665" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 408.6 668.1724)">АННИНО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 668.1724)">АННИНО</text>
                     </g>
                     <g class="line-9 station-23" id="station-23" data-name="bulvar-dmitriya-donskogo">
                         <circle class="st20" cx="451.1" cy="680.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 326 682.6973)">БУЛЬВАР ДМИТРИЯ ДОНСКОГО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 682.6973)">БУЛЬВАР ДМИТРИЯ ДОНСКОГО</text>
                     </g>
                 </g>
                 <g id="line-10">
@@ -388,78 +388,78 @@
                     <g class="line-10 station-57" id="station-57" data-name="krestyanskaya-zastava">
                         <rect x="600" y="475.9" class="st4" width="110" height="10.7"/>
                         <circle class="st24" cx="590.6" cy="481.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 601.6929 484.0732)">КРЕСТЬЯНСКАЯ ЗАСТАВА</text>
+                        <text transform="matrix(1 0 0 1 600.6 484.0732)">КРЕСТЬЯНСКАЯ ЗАСТАВА</text>
                     </g>
                     <g class="line-10 station-41" id="station-41" data-name="dubrovka">
                         <circle class="st24" cx="591" cy="596.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 602.6929 599.4067)">ДУБРОВКА</text>
+                        <text transform="matrix(1 0 0 1 601 599.4067)">ДУБРОВКА</text>
                     </g>
                     <g class="line-10 station-49" id="station-49" data-name="kojuxovskaya">
                         <circle class="st24" cx="590.9" cy="626.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 600.0259 630.7407)">КОЖУХОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 601 630.7407)">КОЖУХОВСКАЯ</text>
                     </g>
                     <g class="line-10 station-98" id="station-98" data-name="pechatniki">
                         <circle class="st24" cx="590.9" cy="638.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 600.3589 641.7397)">ПЕЧАТНИКИ</text>
+                        <text transform="matrix(1 0 0 1 601 641.7397)">ПЕЧАТНИКИ</text>
                     </g>
                     <g class="line-10 station-31" id="station-31" data-name="voljskaya">
                         <circle class="st24" cx="590.9" cy="649.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 599.6929 652.7397)">ВОЛЖСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 601 652.7397)">ВОЛЖСКАЯ</text>
                     </g>
                     <g class="line-10 station-67" id="station-67" data-name="lyublino">
                         <circle class="st24" cx="590.9" cy="660.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 599.6929 662.7397)">ЛЮБЛИНО</text>
+                        <text transform="matrix(1 0 0 1 601 662.7397)">ЛЮБЛИНО</text>
                     </g>
                     <g class="line-10 station-21" id="station-21" data-name="bratislavskaya">
                         <circle class="st24" cx="590.9" cy="671.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 599.6929 674.0737)">БРАТИСЛАВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 601 674.0737)">БРАТИСЛАВСКАЯ</text>
                     </g>
                     <g class="line-10 station-70" id="station-70" data-name="marino">
                         <circle class="st24" cx="590.9" cy="682.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 599.6929 685.0737)">МАРЬИНО</text>
+                        <text transform="matrix(1 0 0 1 601 685.0737)">МАРЬИНО</text>
                     </g>
                     <g class="line-10 station-200" id="station-200" data-name="borisovo">
                         <circle class="st24" cx="590.9" cy="693.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 599.6929 696.4067)">БОРИСОВО</text>
+                        <text transform="matrix(1 0 0 1 601 696.4067)">БОРИСОВО</text>
                     </g>
                     <g class="line-10 station-201" id="station-201" data-name="shipilovskaya">
                         <circle class="st24" cx="590.9" cy="704.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 599.6929 706.6567)">ШИПИЛОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 601 706.6567)">ШИПИЛОВСКАЯ</text>
                     </g>
                     <g class="line-10 station-202" id="station-202" data-name="zyablikovo">
                         <circle class="st24" cx="584" cy="717.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 594.2769 720.6567)">ЗЯБЛИКОВО</text>
+                        <text transform="matrix(1 0 0 1 594 720.6567)">ЗЯБЛИКОВО</text>
                     </g>
                 </g>
                 <g id="line-6">
                     <g class="line-6 station-72" id="station-72" data-name="medvedkovo">
                         <circle class="st23" cx="489.9" cy="70.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 497.189 73.4072)">МЕДВЕДКОВО</text>
+                        <text transform="matrix(1 0 0 1 500 73.4072)">МЕДВЕДКОВО</text>
                     </g>
                     <g class="line-6 station-10" id="station-10" data-name="babushkinskaya">
                         <circle class="st23" cx="489.9" cy="82" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 496.8843 84.5322)">БАБУШСКИНСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 500 84.5322)">БАБУШСКИНСКАЯ</text>
                     </g>
                     <g class="line-6 station-117" id="station-117" data-name="sviblovo">
                         <circle class="st23" cx="489.9" cy="93.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 496.9898 95.6572)">СВИБЛОВО</text>
+                        <text transform="matrix(1 0 0 1 500 95.6572)">СВИБЛОВО</text>
                     </g>
                     <g class="line-6 station-20" id="station-20" data-name="botanicheskiy-sad">
                         <circle class="st23" cx="489.7" cy="108" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 500.4556 110.3237)">БОТАНИЧЕСКИЙ САД</text>
+                        <text transform="matrix(1 0 0 1 500 110.3237)">БОТАНИЧЕСКИЙ САД</text>
                     </g>
                     <g class="line-6 station-26" id="station-26" data-name="vdnx">
                         <circle class="st23" cx="489.9" cy="175.6" r="4.7"/>
-                    <text transform="matrix(1 0 0 1 496.8824 178.4072)">ВДНХ</text>
+                    <text transform="matrix(1 0 0 1 500 178.4072)">ВДНХ</text>
                     </g>
                     <g class="line-6 station-5" id="station-5" data-name="alekseevskaya">
                         <circle class="st23" cx="489.9" cy="186.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 496.7886 189.5322)">АЛЕКСЕЕВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 500 189.5322)">АЛЕКСЕЕВСКАЯ</text>
                     </g>
                     <g class="line-6 station-113" id="station-113" data-name="rijskaya">
 
                         <circle class="st23" cx="489.9" cy="197.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 496.6754 200.6572)">РИЖСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 500 200.6572)">РИЖСКАЯ</text>
                     </g>
                     <g class="line-6 station-191" id="station-191" data-name="prospekt-mira">
                         <circle class="st23" cx="489.9" cy="240.5" r="4.7"/>
@@ -482,74 +482,74 @@
                     <g class="line-6 station-159" id="station-159" data-name="shabolovskaya">
                         <rect x="270.8" y="531.4" class="st4" width="68.5" height="10.2"/>
                         <circle class="st23" cx="345.1" cy="539.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 273.3106 539.8652)">ШАБОЛОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 335 539.8652)">ШАБОЛОВСКАЯ</text>
                     </g>
                     <g class="line-6 station-65" id="station-65" data-name="leninskiy-prospekt">
                         <rect x="178" y="607.3" class="st4" width="98" height="11.9"/>
                         <circle class="st23" cx="284.7" cy="613.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 189 616)">ЛЕНИНСКИЙ ПРОСПЕКТ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 616)">ЛЕНИНСКИЙ ПРОСПЕКТ</text>
                     </g>
                     <g class="line-6 station-3" id="station-3" data-name="akademicheskaya">
                         <circle class="st23" cx="284.7" cy="629" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 208 631.8232)">АКАДЕМИЧЕСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 631.8232)">АКАДЕМИЧЕСКАЯ</text>
                     </g>
                     <g class="line-6 station-110" id="station-110" data-name="profsoyuznaya">
                         <circle class="st23" cx="284.7" cy="640.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 214 643.2534)">ПРОФСОЮЗНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 643.2534)">ПРОФСОЮЗНАЯ</text>
                     </g>
                     <g class="line-6 station-85" id="station-85" data-name="novie-cheremushki">
                         <circle class="st23" cx="284.7" cy="651.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 197 654.3516)">НОВЫЕ ЧЕРЕМУШКИ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 654.3516)">НОВЫЕ ЧЕРЕМУШКИ</text>
                     </g>
                     <g class="line-6 station-43" id="station-43" data-name="kalujskaya">
                         <circle class="st23" cx="284.7" cy="662.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 227 665.7095)">КАЛУЖСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 665.7095)">КАЛУЖСКАЯ</text>
                     </g>
                     <g class="line-6 station-16" id="station-16" data-name="belyayevo">
                         <circle class="st23" cx="284.7" cy="673.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 236 676.5464)">БЕЛЯЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 676.5464)">БЕЛЯЕВО</text>
                     </g>
                     <g class="line-6 station-52" id="station-52" data-name="konkova">
                         <circle class="st23" cx="284.7" cy="684.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 232 687.6445)">КОНЬКОВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 687.6445)">КОНЬКОВО</text>
                     </g>
                     <g class="line-6 station-135" id="station-135" data-name="tepliy-stan">
                         <circle class="st23" cx="284.7" cy="695.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 220 698.7432)">ТЕПЛЫЙ СТАН</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 698.7432)">ТЕПЛЫЙ СТАН</text>
                     </g>
                     <g class="line-6 station-166" id="station-166" data-name="yasenevo">
                         <circle class="st23" cx="284.7" cy="706.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 236 709.9346)">ЯСЕНЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 709.9346)">ЯСЕНЕВО</text>
                     </g>
                     <g class="line-6 station-84" id="station-84" data-name="novoyasenevskaya">
                         <circle class="st23" cx="284.7" cy="721.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 202 724.1563)">НОВОЯСЕНЕВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 724.1563)">НОВОЯСЕНЕВСКАЯ</text>
                     </g>
                 </g>
                 <g id="line-2">
                     <g class="line-2 station-112" id="station-112" data-name="rechnoy-vokzal">
                         <circle class="st18" cx="316.9" cy="97.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 242 99.8237)">РЕЧНОЙ ВОКЗАЛ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 99.8237)">РЕЧНОЙ ВОКЗАЛ</text>
                     </g>
                     <g class="line-2 station-28" id="station-28" data-name="vodniy-stadion">
                         <circle class="st18" cx="316.9" cy="108.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 233 111.3237)">ВОДНЫЙ СТАДИОН</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 111.3237)">ВОДНЫЙ СТАДИОН</text>
                     </g>
                     <g class="line-2 station-29" id="station-29" data-name="voykovskaya">
                         <circle class="st18" cx="317.1" cy="124" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 252 125.5737)">ВОЙКОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 125.5737)">ВОЙКОВСКАЯ</text>
                     </g>
                     <g class="line-2 station-123" id="station-123" data-name="sokol">
                         <circle class="st18" cx="316.9" cy="205.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 281.0738 208.8242)">СОКОЛ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 208.8242)">СОКОЛ</text>
                     </g>
                     <g class="line-2 station-9" id="station-9" data-name="aeroport">
                         <circle class="st18" cx="316.9" cy="216.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 268 219.8662)">АЭРОПОРТ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 219.8662)">АЭРОПОРТ</text>
                     </g>
                     <g class="line-2 station-36" id="station-36" data-name="dinamo">
                         <circle class="st18" cx="316.9" cy="228.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 275 230.9077)">ДИНАМО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 230.9077)">ДИНАМО</text>
                     </g>
                     <g class="line-2 station-196" id="station-196" data-name="belorusskaya">
                         <circle class="st18" cx="341.1" cy="251.9" r="4.7"/>
@@ -573,45 +573,45 @@
                     <g class="line-2 station-2" id="station-2" data-name="avtozavodskaya">
                         <rect x="479.6" y="610.2" class="st4" width="75.5" height="10.2"/>
                         <circle class="st18" cx="564.5" cy="615.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 489 618.4907)">АВТОЗАВОДСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 618.4907)">АВТОЗАВОДСКАЯ</text>
                     </g>
                     <g class="line-2 station-215" id="station-215" data-name="texnopark">
                         <rect x="505.3" y="625.2" class="st4" width="54" height="11.1"/>
                         <circle class="st18" cx="564.5" cy="630.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 510 633.3647)">ТЕХНОПАРК</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 633.3647)">ТЕХНОПАРК</text>
                     </g>
                     <g class="line-2 station-50" id="station-50" data-name="kolomenskaya">
                         <rect x="492.3" y="636.3" class="st4" width="66" height="11.1"/>
                         <circle class="st18" cx="564.5" cy="641.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 497 644.1147)">КОЛОМЕНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 644.1147)">КОЛОМЕНСКАЯ</text>
                     </g>
                     <g class="line-2 station-46" id="station-46" data-name="kashirskaya">
                         <circle class="st18" cx="564.5" cy="656.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 494 659.2397)">КАШИРСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 541 659.2397)">КАШИРСКАЯ</text>
                     </g>
                     <g class="line-2 station-44" id="station-44" data-name="kantemirovskaya">
                         <circle class="st18" cx="564.5" cy="671.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 483 674.1987)">КАНТЕМИРОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 674.1987)">КАНТЕМИРОВСКАЯ</text>
                     </g>
                     <g class="line-2 station-152" id="station-152" data-name="caricino">
                         <circle class="st18" cx="564.5" cy="682.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 508.5 685.3516)">ЦАРИЦЫНО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 685.3516)">ЦАРИЦЫНО</text>
                     </g>
                     <g class="line-2 station-88" id="station-88" data-name="orexovo">
                         <circle class="st18" cx="564.5" cy="693.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 515 696.5039)">ОРЕХОВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 696.5039)">ОРЕХОВО</text>
                     </g>
                     <g class="line-2 station-39" id="station-39" data-name="domodedovskaya">
                         <circle class="st18" cx="564.5" cy="705" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 484 707.6567)">ДОМОДЕДОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 554 707.6567)">ДОМОДЕДОВСКАЯ</text>
                     </g>
                     <g class="line-2 station-53" id="station-53" data-name="krasnogvardeyskaya">
                         <circle class="st18" cx="571.2" cy="717.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 476 720.9067)">КРАСНОГВАРДЕЙСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 561 720.9067)">КРАСНОГВАРДЕЙСКАЯ</text>
                     </g>
                     <g class="line-2 station-204" id="station-204" data-name="alma-atinskaya">
                         <circle class="st18" cx="571" cy="733" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 494 735.6567)">АЛМА-АТИНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 561 735.6567)">АЛМА-АТИНСКАЯ</text>
                     </g>
                 </g>
                 <g id="line-5">
@@ -656,30 +656,30 @@
                 <g id="line-1">
                     <g class="line-1 station-145" id="station-145" data-name="bulvar-rokossovskogo">
                         <circle class="st22" cx="580.8" cy="135.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 586.4429 137.7407)">БУЛЬВАР РОКОССОВСКОГО</text>
+                        <text transform="matrix(1 0 0 1 591 137.7407)">БУЛЬВАР РОКОССОВСКОГО</text>
                     </g>
                     <g class="line-1 station-154" id="station-154" data-name="cherkizovskaya">
                         <circle class="st22" cx="580.7" cy="150" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 591.2554 152.1572)">ЧЕРКИЗОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 591 152.1572)">ЧЕРКИЗОВСКАЯ</text>
                     </g>
                     <g class="line-1 station-106" id="station-106" data-name="preobrajenskaya-ploshad">
                         <rect x="585.1" y="172.8" class="st4" width="134.1" height="11"/>
                         <circle class="st22" cx="580.6" cy="177.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 587.7164 180.9072)">ПРЕОБРАЖЕНСКАЯ ПЛОЩАДЬ</text>
+                        <text transform="matrix(1 0 0 1 591 180.9072)">ПРЕОБРАЖЕНСКАЯ ПЛОЩАДЬ</text>
                     </g>
                     <g class="line-1 station-124" id="station-124" data-name="sokolniki">
                         <rect x="585.1" y="183.5" class="st4" width="134.1" height="10"/>
                         <circle class="st22" cx="580.8" cy="188.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 587.7242 191.6572)">СОКОЛЬНИКИ</text>
+                        <text transform="matrix(1 0 0 1 591 191.6572)">СОКОЛЬНИКИ</text>
                     </g>
                     <g class="line-1 station-55" id="station-55" data-name="krasnoselskaya">
                         <rect x="585.1" y="193.4" class="st4" width="134.1" height="11.7"/>
                         <circle class="st22" cx="580.5" cy="199.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 586.9156 202.4072)">КРАСНОСЕЛЬСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 591 202.4072)">КРАСНОСЕЛЬСКАЯ</text>
                     </g>
                     <g class="line-1 station-190" id="station-190" data-name="komsomolskaya">
                         <circle class="st22" cx="534.4" cy="270.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 545.6939 273.4067)">КОМСОМОЛЬСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 545.4 273.4067)">КОМСОМОЛЬСКАЯ</text>
                     </g>
                     <g class="line-1 station-56" id="station-56" data-name="krasnie-vorota">
                         <circle class="st22" cx="509.8" cy="295.2" r="4.7"/>
@@ -701,50 +701,50 @@
                     </g>
                     <g class="line-1 station-189" id="station-189" data-name="park-kultury">
                         <circle class="st22" cx="318.5" cy="485.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 241.6983 481.4897)">ПАРК КУЛЬТУРЫ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 308 481.4897)">ПАРК КУЛЬТУРЫ</text>
                     </g>
                     <g class="line-1 station-151" id="station-151" data-name="frunzenskaya">
                         <circle class="st22" cx="298.6" cy="506.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 230.3101 507.1982)">ФРУНЗЕНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 288 507.1982)">ФРУНЗЕНСКАЯ</text>
                     </g>
                     <g class="line-1 station-125" id="station-125" data-name="sportivnaya">
                         <circle class="st22" cx="230.9" cy="573.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 163.0313 574.4902)">СПОРТИВНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 220 574.4902)">СПОРТИВНАЯ</text>
                     </g>
                     <g class="line-1 station-33" id="station-33" data-name="vorobevi-gory">
                         <circle class="st22" cx="160.4" cy="644.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 77 647.3232)">ВОРОБЬЕВЫ ГОРЫ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 647.3232)">ВОРОБЬЕВЫ ГОРЫ</text>
                     </g>
                     <g class="line-1 station-148" id="station-148" data-name="universitet">
                         <circle class="st22" cx="160.4" cy="655.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 95 658.4771)">УНИВЕРСИТЕТ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 658.4771)">УНИВЕРСИТЕТ</text>
                     </g>
                     <g class="line-1 station-108" id="station-108" data-name="prospekt-vernadskogo">
                         <circle class="st22" cx="160.4" cy="667" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 53 669.6309)">ПРОСПЕКТ ВЕРНАДСКОГО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 669.6309)">ПРОСПЕКТ ВЕРНАДСКОГО</text>
                     </g>
                     <g class="line-1 station-164" id="station-164" data-name="yugo-zapadnaya">
                         <circle class="st22" cx="160.4" cy="678.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 87 680.7837)">ЮГО-ЗАПАДНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 680.7837)">ЮГО-ЗАПАДНАЯ</text>
                     </g>
                     <g class="line-1 station-209" id="station-209" data-name="troporeva">
                         <circle class="st22" cx="160.4" cy="689.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 102.6006 691.937)">ТРОПАРЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 691.937)">ТРОПАРЕВО</text>
                     </g>
                     <g class="line-1 station-210" id="station-210" data-name="rumyancevo">
                         <circle class="st22" cx="160.4" cy="700.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 101.5616 703.0908)">РУМЯНЦЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 703.0908)">РУМЯНЦЕВО</text>
                     </g>
                     <g class="line-1 station-217" id="station-217" data-name="salarevo">
                         <circle class="st22" cx="160.4" cy="711.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 101.8741 714.2432)">САЛАРЬЕВО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 150 714.2432)">САЛАРЬЕВО</text>
                     </g>
                 </g>
                 <g id="line-13">
                     <g class="line-13 station-219" id="station-219" data-name="baltiyskaya">
                         <rect x="248.3" y="131.4" class="st4" width="59.3" height="10.8"/>
                         <circle class="st41" cx="317" cy="136.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 253 140.0742)">БАЛТИЙСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 306 140.0742)">БАЛТИЙСКАЯ</text>
                     </g>
                     <g class="line-13 station-220" id="station-220" data-name="lixobory">
                         <circle class="st41" cx="349.7" cy="124.7" r="4.7"/>
@@ -768,14 +768,14 @@
                     </g>
                     <g class="line-13 station-226" id="station-226" data-name="sokolinaya-gora">
                         <circle class="st41" cx="684.7" cy="322.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 690.5132 325.0742)">СОКОЛИНАЯ ГОРА</text>
+                        <text transform="matrix(1 0 0 1 694 325.0742)">СОКОЛИНАЯ ГОРА</text>
                     </g>
                     <g class="line-13 station-227" id="station-227" data-name="shosse-entuziastov">
                         <circle class="st41" cx="690.4" cy="386.4" r="4.7"/>
                     </g>
                     <g class="line-13 station-228" id="station-228" data-name="nijegorodskaya">
                         <circle class="st41" cx="684.2" cy="435.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 692.5836 438.5742)">НИЖЕГОРОДСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 694 438.5742)">НИЖЕГОРОДСКАЯ</text>
                     </g>
                     <g class="line-13 station-229" id="station-229" data-name="dubrovka">
                         <circle class="st41" cx="591.1" cy="584" r="4.7"/>
@@ -792,11 +792,11 @@
                     <g class="line-13 station-233" id="station-233" data-name="kutuzovskaya">
                         <circle class="st41" cx="164.3" cy="407.9" r="4.7"/>
                         <rect x="77.2" y="394.1" class="st4" width="68.5" height="10.2"/>
-                        <text transform="matrix(1 0 0 1 85.649 402.2407)">КУТУЗОВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 145 402.2407)">КУТУЗОВСКАЯ</text>
                     </g>
                     <g class="line-13 station-234" id="station-234" data-name="shelepixa">
                         <circle class="st41" cx="183.4" cy="274.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 128.981 277.2407)">ШЕЛЕПИХА</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 173 277.2407)">ШЕЛЕПИХА</text>
                     </g>
                     <g class="line-13 station-235" id="station-235" data-name="panfilovskaya">
                         <circle class="st41" cx="226" cy="205.1" r="4.7"/>
@@ -805,49 +805,49 @@
                 <g id="line-7">
                     <g class="line-7 station-100" id="station-100" data-name="planernaya">
                         <circle class="st21" cx="216.9" cy="136.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 158.9405 138.9897)">ПЛАНЕРНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 206 138.9897)">ПЛАНЕРНАЯ</text>
                     </g>
                     <g class="line-7 station-130" id="station-130" data-name="sxodnenskaya">
                         <circle class="st21" cx="216.9" cy="147.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 150 150.2397)">СХОДНЕНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 206 150.2397)">СХОДНЕНСКАЯ</text>
                     </g>
                     <g class="line-7 station-141" id="station-141" data-name="tushinskaya">
                         <circle class="st21" cx="216.9" cy="158.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 158.2178 161.4897)">ТУШИНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 206 161.4897)">ТУШИНСКАЯ</text>
                     </g>
                     <g class="line-7 station-218" id="station-218" data-name="spartak">
                         <circle class="st21" cx="216.9" cy="169.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 170 172.7397)">СПАРТАК</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 206 172.7397)">СПАРТАК</text>
                     </g>
                     <g class="line-7 station-162" id="station-162" data-name="shukinskaya">
                         <circle class="st21" cx="216.9" cy="181" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 158 183.9897)">ЩУКИНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 206 183.9897)">ЩУКИНСКАЯ</text>
                     </g>
                     <g class="line-7 station-87" id="station-87" data-name="oktyabrskoe-pole">
                         <circle class="st21" cx="217" cy="195.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 129 198.6982)">ОКТЯБРЬСКОЕ ПОЛЕ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 206 198.6982)">ОКТЯБРЬСКОЕ ПОЛЕ</text>
                     </g>
                     <g class="line-7 station-103" id="station-103" data-name="polejaevskaya">
                         <rect x="167.8" y="225.4" class="st4" width="75.5" height="10.2"/>
                         <circle class="st21" cx="250" cy="229.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 172.0625 233.1367)">ПОЛЕЖАЕВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 240 233.1367)">ПОЛЕЖАЕВСКАЯ</text>
                     </g>
                     <g class="line-7 station-14" id="station-14" data-name="begovaya">
                         <circle class="st21" cx="266.9" cy="246.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 219.1856 249.6582)">БЕГОВАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 256 249.6582)">БЕГОВАЯ</text>
                     </g>
                     <g class="line-7 station-142" id="station-142" data-name="ulica-1905">
                         <circle class="st21" cx="284.7" cy="264.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 204.0635 267.4912)">УЛИЦА 1905 ГОДА</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 274 267.4912)">УЛИЦА 1905 ГОДА</text>
                     </g>
                     <g class="line-7 station-12" id="station-12" data-name="barrikadnaya">
                         <circle class="st21" cx="305.6" cy="284.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 233.3463 287.0742)">БАРРИКАДНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 295 287.0742)">БАРРИКАДНАЯ</text>
                     </g>
                     <g class="line-7 station-111" id="station-111" data-name="pushkinskaya">
                         <rect x="280.1" y="323.7" class="st4" width="59.2" height="11"/>
                         <circle class="st21" cx="350.5" cy="329.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 282.1797 332.1157)">ПУШКИНСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 340 332.1157)">ПУШКИНСКАЯ</text>
                     </g>
                     <g class="line-7 station-60" id="station-60" data-name="kuzneckiy-most">
                         <circle class="st21" cx="443.8" cy="350.4" r="4.7"/>
@@ -863,77 +863,77 @@
                     </g>
                     <g class="line-7 station-30" id="station-30" data-name="volgogradskiy-prospekt">
                         <circle class="st21" cx="716.2" cy="606.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 609.5732)">ВОЛГОГРАДСКИЙ ПРОСПЕКТ</text>
+                        <text transform="matrix(1 0 0 1 726 609.5732)">ВОЛГОГРАДСКИЙ ПРОСПЕКТ</text>
                     </g>
                     <g class="line-7 station-134" id="station-134" data-name="tekstilshiki">
                         <circle class="st21" cx="716.2" cy="618.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 620.5166)">ТЕКСТИЛЬЩИКИ</text>
+                        <text transform="matrix(1 0 0 1 726 620.5166)">ТЕКСТИЛЬЩИКИ</text>
                     </g>
                     <g class="line-7 station-61" id="station-61" data-name="kuzminki">
                         <circle class="st21" cx="716.2" cy="629.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 631.7202)">КУЗЬМИНКИ</text>
+                        <text transform="matrix(1 0 0 1 726 631.7202)">КУЗЬМИНКИ</text>
                     </g>
                     <g class="line-7 station-115" id="station-115" data-name="ryazanskiy-prospekt">
                         <circle class="st21" cx="716.2" cy="640.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 643.1851)">РЯЗАНСКИЙ ПРОСПЕКТ</text>
+                        <text transform="matrix(1 0 0 1 726 643.1851)">РЯЗАНСКИЙ ПРОСПЕКТ</text>
                     </g>
                     <g class="line-7 station-35" id="station-35" data-name="vixino">
                         <circle class="st21" cx="716.2" cy="651.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 654.1289)">ВЫХИНО</text>
+                        <text transform="matrix(1 0 0 1 726 654.1289)">ВЫХИНО</text>
                     </g>
                     <g class="line-7 station-205" id="station-205" data-name="lermontovskiy-prospekt">
                         <circle class="st21" cx="716.2" cy="662.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 665.5923)">ЛЕРМОНТОВСКИЙ ПРОСПЕКТ</text>
+                        <text transform="matrix(1 0 0 1 726 665.5923)">ЛЕРМОНТОВСКИЙ ПРОСПЕКТ</text>
                     </g>
                     <g class="line-7 station-206" id="station-206" data-name="julebino">
                         <circle class="st21" cx="716.2" cy="673.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 676.5356)">ЖУЛЕБИНО</text>
+                        <text transform="matrix(1 0 0 1 726 676.5356)">ЖУЛЕБИНО</text>
                     </g>
                     <g class="line-7 station-211" id="station-211" data-name="kotelniki">
                         <circle class="st21" cx="716.2" cy="684.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 723.6929 687.7402)">КОТЕЛЬНИКИ</text>
+                        <text transform="matrix(1 0 0 1 726 687.7402)">КОТЕЛЬНИКИ</text>
                     </g>
                 </g>
                 <g id="line-3">
                     <g class="line-3 station-203" id="station-203" data-name="pyatnickoe-shosse">
                         <circle class="st25" cx="108.6" cy="233.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 23 236.3237)">ПЯТНИЦКОЕ ШОССЕ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 236.3237)">ПЯТНИЦКОЕ ШОССЕ</text>
                     </g>
                     <g class="line-3 station-75" id="station-75" data-name="mitino">
                         <circle class="st25" cx="108.6" cy="245.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 64 247.5737)">МИТИНО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 247.5737)">МИТИНО</text>
                     </g>
                     <g class="line-3 station-32" id="station-32" data-name="volokolamskaya">
                         <circle class="st25" cx="108.6" cy="256.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 30 258.8237)">ВОЛОКОЛАМСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 258.8237)">ВОЛОКОЛАМСКАЯ</text>
                     </g>
                     <g class="line-3 station-77" id="station-77" data-name="myakinino">
                         <circle class="st25" cx="108.6" cy="267.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 54 270.0737)">МЯКИНИНО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 270.0737)">МЯКИНИНО</text>
                     </g>
                     <g class="line-3 station-127" id="station-127" data-name="strogino">
                         <circle class="st25" cx="108.6" cy="278.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 57 281.3237)">СТРОГИНО</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 281.3237)">СТРОГИНО</text>
                     </g>
                     <g class="line-3 station-59" id="station-59" data-name="krilatskoe">
                         <circle class="st25" cx="108.6" cy="289.6" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 47 292.3237)">КРЫЛАТСКОЕ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 292.3237)">КРЫЛАТСКОЕ</text>
                     </g>
                     <g class="line-3 station-76" id="station-76" data-name="molodejnaya">
                         <circle class="st25" cx="108.6" cy="300.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 42 303.5737)">МОЛОДЕЖНАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 303.5737)">МОЛОДЕЖНАЯ</text>
                     </g>
                     <g class="line-3 station-186" id="station-186" data-name="kuncevskaya">
                         <circle class="st25" cx="108.7" cy="315.7" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 47 318.2402)">КУНЦЕВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 318.2402)">КУНЦЕВСКАЯ</text>
                     </g>
                     <g class="line-3 station-121" id="station-121" data-name="slavyanskiy-bulvar">
                         <circle class="st25" cx="108.5" cy="361" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 10 363.9067)">СЛАВЯНСКИЙ БУЛЬВАР</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 98 363.9067)">СЛАВЯНСКИЙ БУЛЬВАР</text>
                     </g>
                     <g class="line-3 station-93" id="station-93" data-name="park-pobedi">
                         <circle class="st25" cx="130.7" cy="432.8" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 63.2764 440.5737)">ПАРК ПОБЕДЫ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 120 440.5737)">ПАРК ПОБЕДЫ</text>
                     </g>
                     <g class="line-3 station-187" id="station-187" data-name="kievskaya">
                         <circle class="st25" cx="298.1" cy="432.4" r="4.7"/>
@@ -954,33 +954,33 @@
                     <g class="line-3 station-13" id="station-13" data-name="baumanskaya">
                         <rect x="668.7" y="299.7" class="st4" width="138.1" height="11.3"/>
                         <circle class="st25" cx="667.4" cy="305.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 673.5533 308.1157)">БАУМАНСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 308.1157)">БАУМАНСКАЯ</text>
                     </g>
                     <g class="line-3 station-163" id="station-163" data-name="elektrozavodskaya">
                         <rect x="668.7" y="288.7" class="st4" width="138.1" height="10.9"/>
                         <circle class="st25" cx="667.3" cy="294.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 673.647 297.0532)">ЭЛЕКТРОЗАВОДСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 297.0532)">ЭЛЕКТРОЗАВОДСКАЯ</text>
                     </g>
                     <g class="line-3 station-119" id="station-119" data-name="semenovskaya">
                         <rect x="668.7" y="277.9" class="st4" width="138.1" height="10.8"/>
                         <circle class="st25" cx="667.3" cy="282.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 673.858 285.9907)">СЕМЕНОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 285.9907)">СЕМЕНОВСКАЯ</text>
                     </g>
                     <g class="line-3 station-94" id="station-94" data-name="partizanskaya">
                         <circle class="st25" cx="667.4" cy="255.1" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 677.7095 257.4907)">ПАРТИЗАНСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 257.4907)">ПАРТИЗАНСКАЯ</text>
                     </g>
                     <g class="line-3 station-42" id="station-42" data-name="izmaylovskaya">
                         <circle class="st25" cx="667.3" cy="240.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 673.5298 243.3237)">ИЗМАЙЛОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 243.3237)">ИЗМАЙЛОВСКАЯ</text>
                     </g>
                     <g class="line-3 station-95" id="station-95" data-name="pervomayskaya">
                         <circle class="st25" cx="667.3" cy="229.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 673.6353 232.2036)">ПЕРВОМАЙСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 232.2036)">ПЕРВОМАЙСКАЯ</text>
                     </g>
                     <g class="line-3 station-161" id="station-161" data-name="shelkovskaya">
                         <circle class="st25" cx="667.3" cy="217.9" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 673.5298 220.8237)">ЩЕЛКОВСКАЯ</text>
+                        <text transform="matrix(1 0 0 1 677 220.8237)">ЩЕЛКОВСКАЯ</text>
                     </g>
                 </g>
                 <g id="line-12">
@@ -995,19 +995,19 @@
                     </g>
                     <g class="line-12 station-146" id="station-146" data-name="ulica-skobelevskaya">
                         <circle class="st40" cx="451.1" cy="708.2" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 354 710.8223)">УЛИЦА СКОБЕЛЕВСКАЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 710.8223)">УЛИЦА СКОБЕЛЕВСКАЯ</text>
                     </g>
                     <g class="line-12 station-22" id="station-22" data-name="bulvar-admirala-ushakova">
                         <circle class="st40" cx="451.1" cy="719.3" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 331 722.0723)">БУЛЬВАР ДМИТРИЯ УШАКОВА</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 722.0723)">БУЛЬВАР ДМИТРИЯ УШАКОВА</text>
                     </g>
                     <g class="line-12 station-144" id="station-144" data-name="ulica-gorchakova">
                         <circle class="st40" cx="451.1" cy="730.4" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 369 733.5723)">УЛИЦА ГОРЧАКОВА</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 733.5723)">УЛИЦА ГОРЧАКОВА</text>
                     </g>
                     <g class="line-12 station-24" id="station-24" data-name="buninskaya-alleya">
                         <circle class="st40" cx="451.1" cy="741.5" r="4.7"/>
-                        <text transform="matrix(1 0 0 1 368 744.4473)">БУНИНСКАЯ АЛЛЕЯ</text>
+                        <text text-anchor="end" transform="matrix(1 0 0 1 441 744.4473)">БУНИНСКАЯ АЛЛЕЯ</text>
                     </g>
                 </g>
             </g>

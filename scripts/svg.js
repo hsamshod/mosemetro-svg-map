@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs, $timeout) {
-      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle;
+      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle;
       debug = false;
       classes = {
         hidden: 'map-hidden'
@@ -129,7 +129,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return bindQuickSelect();
       };
       handleQuickSelect = function(line_id, station_id, mode) {
-        var j, len, ref, station, stations, toggle_mode;
+        var j, len, ref, related, station, stations, toggle_mode;
         station = getStation(station_id);
         switch (mode) {
           case 0:
@@ -148,6 +148,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
               station_id = ref[j];
               stations.push(getStation(station_id)[0]);
             }
+        }
+        if ((related = getRelatedStations(stations)).length) {
+          $.merge(stations, related);
         }
         toggle_mode = stations.length === shownCount(stations) ? 0 : 1;
         $.each(stations, function() {
@@ -175,7 +178,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return $element.panzoom({
           minScale: 1,
           maxScale: 5,
-          increment: 1.5,
+          increment: 1.2,
           contain: 'automatic',
           panOnlyWhenZoomed: false
         });
@@ -213,6 +216,23 @@ angular.module('svgmap', []).directive('svgMap', function() {
           return $("" + selectors.stations, $element);
         }
       };
+      getRelatedStations = function(stations) {
+        var related_stations;
+        related_stations = [];
+        _.each(stations, function(station) {
+          var relation, station_id;
+          station_id = parseId(station);
+          relation = $(selectors.elements + ".station-" + station_id, $element);
+          if (relation.length) {
+            return _.each(relation[0].classList, function(relation_class) {
+              if ((relation_class !== getStationClass(station_id)) && relation_class.match(/station\-[0-9]+$/)) {
+                return related_stations.push(getStation(parseId(relation_class))[0]);
+              }
+            });
+          }
+        });
+        return related_stations;
+      };
       isHidden = function(station) {
         return station.is(selectors.hidden);
       };
@@ -238,14 +258,18 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       $scope.selectAllStations = function() {
         var j, len, ref, results, station;
-        $scope.selected = [];
-        ref = getStation();
-        results = [];
-        for (j = 0, len = ref.length; j < len; j++) {
-          station = ref[j];
-          results.push(select(parseId(station)));
+        if ($scope.selected.length === getStation().length) {
+          return $scope.selected = [];
+        } else {
+          $scope.selected = [];
+          ref = getStation();
+          results = [];
+          for (j = 0, len = ref.length; j < len; j++) {
+            station = ref[j];
+            results.push(select(parseId(station)));
+          }
+          return results;
         }
-        return results;
       };
       return render();
     }
