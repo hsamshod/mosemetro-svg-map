@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs, $timeout) {
-      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle;
+      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getOrientation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle, watchOrientationChange;
       debug = false;
       classes = {
         hidden: 'map-hidden'
@@ -23,6 +23,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         inner_station_ids: [83, 109, 51, 63, 131, 91, 38, 86, 92, 47, 54, 15, 74, 196, 12, 4, 8, 18, 19, 187, 198, 189, 192, 120, 193, 199, 68, 158, 188, 190, 191, 140, 129, 157, 126, 66, 60, 156, 111, 71, 138, 153, 132, 133, 90, 102, 82, 194, 48, 195, 137, 56, 58, 122, 104]
       };
       $scope.show_quick_selects = false;
+      $scope.orientation = 'portrait';
       render = function() {
         if ('string' === typeof $scope.selected) {
           $scope.selected = $scope.selected.split(',');
@@ -52,7 +53,6 @@ angular.module('svgmap', []).directive('svgMap', function() {
         show(getStation(station_id));
         selectRelation(station_id);
         selectLine(station_id);
-        log(station_id);
         if ($scope.selected.indexOf(station_id) === -1) {
           return $scope.selected.push(station_id);
         }
@@ -271,6 +271,19 @@ angular.module('svgmap', []).directive('svgMap', function() {
           return results;
         }
       };
+      getOrientation = function() {
+        $scope.orientation = window.innerHeight < window.innerWidth ? 'landscape' : 'portrait';
+        return log('orientation set: ' + $scope.orientation);
+      };
+      watchOrientationChange = function() {
+        getOrientation();
+        return $(window).off('resize').on('resize', function() {
+          getOrientation();
+          $scope.$apply();
+          return render();
+        });
+      };
+      watchOrientationChange();
       return render();
     }
   };

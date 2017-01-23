@@ -206,7 +206,7 @@ $svg-shown:				1;
 
 #stations > g > g {
   > text {
-	@include fill('svg-black');font-family:Arial;font-weight:bold;font-size:0.5em;
+	@include fill('svg-black');font-family:Arial;font-weight:bold;
   }
   &.map-hidden >text {
 	@include fill('svg-black-hidden');
@@ -260,7 +260,18 @@ $svg-shown:				1;
 	display: inline-block;
 	height: 100%;
 	& svg {
+	  font-size: 0.5em;
 	  width: auto !important;
+	}
+  }
+  &.landscape {
+	width: 100%;
+	& > div {
+	  width: 100%;
+	  & svg {
+		height: auto!important;
+		width: 100%!important;
+	  }
 	}
   }
 }

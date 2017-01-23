@@ -25,6 +25,7 @@ angular
 											90, 102, 82, 194, 48, 195, 137, 56, 58, 122, 104
 										]
 			$scope.show_quick_selects = false
+			$scope.orientation        = 'portrait'
 
 			render = ->
 				$scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
@@ -41,7 +42,6 @@ angular
 				show getStation station_id
 				selectRelation station_id
 				selectLine station_id
-				log station_id
 				$scope.selected.push station_id if $scope.selected.indexOf(station_id) is -1
 
 			selectRelation = (station_id) ->
@@ -209,4 +209,23 @@ angular
 					$scope.selected = [] #empty before selecting
 					select parseId station for station in getStation()
 
+			getOrientation = ->
+				$scope.orientation = if window.innerHeight < window.innerWidth then 'landscape' else 'portrait'
+				log 'orientation set: ' + $scope.orientation
+
+			watchOrientationChange = ->
+				getOrientation()
+				$ window
+#					.off 'orientationchange'
+#					.on 'orientationchange', ->
+#						getOrientation()
+#						$scope.$apply()
+#						render()
+					.off 'resize'
+					.on 'resize', ->
+						getOrientation()
+						$scope.$apply()
+						render()
+
+			watchOrientationChange()
 			render()
