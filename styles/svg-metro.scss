@@ -269,8 +269,8 @@ $svg-shown:				1;
 	& > div {
 	  width: 100%;
 	  & svg {
-		height: auto!important;
-		width: 100%!important;
+		height: 100%;
+		//width: 100%!important;
 	  }
 	}
   }
