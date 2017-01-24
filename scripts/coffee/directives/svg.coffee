@@ -213,19 +213,23 @@ angular
 				$scope.orientation = if window.innerHeight < window.innerWidth then 'landscape' else 'portrait'
 				log 'orientation set: ' + $scope.orientation
 
+			resetPosition = ->
+				$element
+					.css 'transform', 'none'
+
+			reRender =  ->
+				resetPosition()
+				getOrientation()
+				$scope.$apply()
+				render()
+
 			watchOrientationChange = ->
 				getOrientation()
-				$ window
-#					.off 'orientationchange'
-#					.on 'orientationchange', ->
-#						getOrientation()
-#						$scope.$apply()
-#						render()
+				$element
+					.off 'orientationchange'
+					.on 'orientationchange', reRender
 					.off 'resize'
-					.on 'resize', ->
-						getOrientation()
-						$scope.$apply()
-						render()
+					.on 'resize', reRender
 
 			watchOrientationChange()
 			render()

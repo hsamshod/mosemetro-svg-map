@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs, $timeout) {
-      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getOrientation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle, watchOrientationChange;
+      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getOrientation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, reRender, render, resetPosition, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle, watchOrientationChange;
       debug = false;
       classes = {
         hidden: 'map-hidden'
@@ -275,13 +275,18 @@ angular.module('svgmap', []).directive('svgMap', function() {
         $scope.orientation = window.innerHeight < window.innerWidth ? 'landscape' : 'portrait';
         return log('orientation set: ' + $scope.orientation);
       };
+      resetPosition = function() {
+        return $element.css('transform', 'none');
+      };
+      reRender = function() {
+        resetPosition();
+        getOrientation();
+        $scope.$apply();
+        return render();
+      };
       watchOrientationChange = function() {
         getOrientation();
-        return $(window).off('resize').on('resize', function() {
-          getOrientation();
-          $scope.$apply();
-          return render();
-        });
+        return $element.off('orientationchange').on('orientationchange', reRender).off('resize').on('resize', reRender);
       };
       watchOrientationChange();
       return render();
