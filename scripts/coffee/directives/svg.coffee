@@ -209,22 +209,15 @@ angular
 					$scope.selected = [] #empty before selecting
 					select parseId station for station in getStation()
 
-			getOrientation = ->
-				$scope.orientation = if window.innerHeight < window.innerWidth then 'landscape' else 'portrait'
-				log 'orientation set: ' + $scope.orientation
-
 			resetPosition = ->
-				$element
-					.css 'transform', 'none'
+				$element.panzoom 'destroy'
+				$element.removeAttr 'style'
 
 			reRender =  ->
 				resetPosition()
-				getOrientation()
-				$scope.$apply()
 				render()
 
 			watchOrientationChange = ->
-				getOrientation()
 				$element
 					.off 'orientationchange'
 					.on 'orientationchange', reRender

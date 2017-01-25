@@ -255,26 +255,34 @@ $svg-shown:				1;
 .st40{@include fill('svg-blue-gray');}
 
 .svg-map {
-  font-size: 1em;
-  min-width: 100%;
+  font-size: 0.5em;
 }
+
 .scalable-map {
+  font-size: 0.5em;
   display: inline-block;
   & > div {
 	display: inline-block;
 	height: 100%;
 	& svg {
-	  font-size: 0.5em;
 	  width: auto !important;
 	}
   }
-  &.landscape {
+}
+
+@media only screen and (min-width: 600px){
+  .scalable-map {
+	display: inline-block;
 	width: 100%;
+	height: auto !important;
 	& > div {
+	  display: inline-block;
 	  width: 100%;
+	  height: auto !important;
 	  & svg {
-		height: 100%;
-		width: 100%!important;
+		width: 100%;
+		font-size: 0.7em;
+		height: auto !important;
 	  }
 	}
   }
