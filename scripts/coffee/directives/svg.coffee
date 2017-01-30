@@ -143,6 +143,7 @@ angular
 
 			bindPinch = ->
 				$element.panzoom 'destroy'
+				$element.removeAttr 'style'
 				$element.panzoom
 					minScale: 1
 					maxScale: 5
@@ -209,12 +210,12 @@ angular
 					$scope.selected = [] #empty before selecting
 					select parseId station for station in getStation()
 
-			resetPosition = ->
-				$element.panzoom 'destroy'
-				$element.removeAttr 'style'
+#			resetPosition = ->
+#				$element.panzoom 'destroy'
+#				$element.removeAttr 'style'
 
 			reRender =  ->
-				resetPosition()
+#				resetPosition()
 				render()
 
 			watchOrientationChange = ->

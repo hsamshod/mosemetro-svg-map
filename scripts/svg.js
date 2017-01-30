@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs, $timeout) {
-      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, reRender, render, resetPosition, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle, watchOrientationChange;
+      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, reRender, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle, watchOrientationChange;
       debug = false;
       classes = {
         hidden: 'map-hidden'
@@ -175,6 +175,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       bindPinch = function() {
         $element.panzoom('destroy');
+        $element.removeAttr('style');
         return $element.panzoom({
           minScale: 1,
           maxScale: 5,
@@ -271,12 +272,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
           return results;
         }
       };
-      resetPosition = function() {
-        $element.panzoom('destroy');
-        return $element.removeAttr('style');
-      };
       reRender = function() {
-        resetPosition();
         return render();
       };
       watchOrientationChange = function() {
