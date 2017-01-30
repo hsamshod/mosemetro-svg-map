@@ -282,8 +282,8 @@ angular.module('svgmap', []).directive('svgMap', function() {
       alignMap = function() {
         var margin_top;
         $element.css({
-          'transform': '',
-          'transform-origin': ''
+          transform: '',
+          transformOrigin: ''
         });
         if ($scope.orientation === 'landscape') {
           margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2;
@@ -294,7 +294,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
           $element.css({
             marginTop: ''
           });
-          return $('>div', $element).css('min-width', $('>div>svg', $element.css('width')));
+          return $('> div', $element).css({
+            minWidth: $('> div > svg', $element).css('width')
+          });
         }
       };
       watchOrientationChange = function() {

@@ -217,15 +217,16 @@ angular
 
 			alignMap = ->
 				$element.css
-					'transform': ''
-					'transform-origin': ''
+					transform: ''
+					transformOrigin: ''
 				if $scope.orientation is 'landscape'
 					margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2
 					$element.css marginTop: margin_top + 'px'
 				else
 					$element.css marginTop: ''
-					$ '>div', $element
-						.css 'min-width', $ '>div>svg', $element.css 'width'
+					$ '> div', $element
+						.css
+							minWidth: $('> div > svg', $element).css 'width'
 
 			watchOrientationChange = ->
 				$element
