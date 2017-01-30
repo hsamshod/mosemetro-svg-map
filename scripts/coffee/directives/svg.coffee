@@ -28,7 +28,8 @@ angular
 			$scope.orientation        = 'portrait'
 
 			render = ->
-				$scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
+				setOrientation()
+				parseSelected()
 				deselectAll()
 				selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
 
@@ -143,7 +144,7 @@ angular
 
 			bindPinch = ->
 				$element.panzoom 'destroy'
-				$element.removeAttr 'style'
+				alignMap()
 				$element.panzoom
 					minScale: 1
 					maxScale: 5
@@ -210,20 +211,28 @@ angular
 					$scope.selected = [] #empty before selecting
 					select parseId station for station in getStation()
 
-#			resetPosition = ->
-#				$element.panzoom 'destroy'
-#				$element.removeAttr 'style'
+			parseSelected = -> $scope.selected = $scope.selected.split(',') if 'string' == typeof $scope.selected
 
-			reRender =  ->
-#				resetPosition()
-				render()
+			setOrientation = -> $scope.orientation = if window.innerHeight < window.innerWidth then 'landscape' else 'portrait'
+
+			alignMap = ->
+				$element.css
+					'transform': ''
+					'transform-origin': ''
+				if $scope.orientation is 'landscape'
+					margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2
+					$element.css marginTop: margin_top + 'px'
+				else
+					$element.css marginTop: ''
+					$ '>div', $element
+						.css 'min-width', $ '>div>svg', $element.css 'width'
 
 			watchOrientationChange = ->
 				$element
-					.off 'orientationchange'
-					.on 'orientationchange', reRender
+#					.off 'orientationchange'
+#					.on 'orientationchange', render
 					.off 'resize'
-					.on 'resize', reRender
+					.on 'resize', render
 
 			watchOrientationChange()
 			render()

@@ -8,7 +8,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       selected: '='
     },
     controller: function($scope, $element, $attrs, $timeout) {
-      var bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, reRender, render, select, selectAll, selectLine, selectRelation, selectors, show, shownCount, toggle, watchOrientationChange;
+      var alignMap, bindClick, bindPinch, bindQuickSelect, classes, debug, deselect, deselectAll, deselectLine, deselectRelation, getRelatedStations, getStation, getStationClass, handleClick, handleQuickSelect, hide, isHidden, log, parseId, parseSelected, render, select, selectAll, selectLine, selectRelation, selectors, setOrientation, show, shownCount, toggle, watchOrientationChange;
       debug = false;
       classes = {
         hidden: 'map-hidden'
@@ -25,9 +25,8 @@ angular.module('svgmap', []).directive('svgMap', function() {
       $scope.show_quick_selects = false;
       $scope.orientation = 'portrait';
       render = function() {
-        if ('string' === typeof $scope.selected) {
-          $scope.selected = $scope.selected.split(',');
-        }
+        setOrientation();
+        parseSelected();
         deselectAll();
         if ($scope.selected && $scope.selected.length && _.isArray($scope.selected)) {
           selectAll();
@@ -175,7 +174,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
       };
       bindPinch = function() {
         $element.panzoom('destroy');
-        $element.removeAttr('style');
+        alignMap();
         return $element.panzoom({
           minScale: 1,
           maxScale: 5,
@@ -272,11 +271,34 @@ angular.module('svgmap', []).directive('svgMap', function() {
           return results;
         }
       };
-      reRender = function() {
-        return render();
+      parseSelected = function() {
+        if ('string' === typeof $scope.selected) {
+          return $scope.selected = $scope.selected.split(',');
+        }
+      };
+      setOrientation = function() {
+        return $scope.orientation = window.innerHeight < window.innerWidth ? 'landscape' : 'portrait';
+      };
+      alignMap = function() {
+        var margin_top;
+        $element.css({
+          'transform': '',
+          'transform-origin': ''
+        });
+        if ($scope.orientation === 'landscape') {
+          margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2;
+          return $element.css({
+            marginTop: margin_top + 'px'
+          });
+        } else {
+          $element.css({
+            marginTop: ''
+          });
+          return $('>div', $element).css('min-width', $('>div>svg', $element.css('width')));
+        }
       };
       watchOrientationChange = function() {
-        return $element.off('orientationchange').on('orientationchange', reRender).off('resize').on('resize', reRender);
+        return $element.off('resize').on('resize', render);
       };
       watchOrientationChange();
       return render();
