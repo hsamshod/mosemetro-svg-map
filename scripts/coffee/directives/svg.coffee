@@ -229,7 +229,7 @@ angular
 							minWidth: $('> div > svg', $element).css 'width'
 
 			watchOrientationChange = ->
-				$element
+				$ window
 #					.off 'orientationchange'
 #					.on 'orientationchange', render
 					.off 'resize'

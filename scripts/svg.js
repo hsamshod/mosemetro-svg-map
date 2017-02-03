@@ -300,7 +300,7 @@ angular.module('svgmap', []).directive('svgMap', function() {
         }
       };
       watchOrientationChange = function() {
-        return $element.off('resize').on('resize', render);
+        return $(window).off('resize').on('resize', render);
       };
       watchOrientationChange();
       return render();
