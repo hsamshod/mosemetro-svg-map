@@ -258,6 +258,16 @@ $svg-shown:				1;
   font-size: 0.5em;
 }
 
+// IE 9+
+@media screen and (min-width:0\0){
+  .svg-map svg {
+	width: 800px!important;
+	height: 670px!important;
+	background: blue;
+  }
+}
+
+
 .scalable-map {
   font-size: 0.5em;
   display: inline-block;
@@ -270,7 +280,7 @@ $svg-shown:				1;
   }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 580px){
   .scalable-map {
 	display: inline-block;
 	width: 100%;
