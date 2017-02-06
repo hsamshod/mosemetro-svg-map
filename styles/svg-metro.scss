@@ -280,7 +280,8 @@ $svg-shown:				1;
   }
 }
 
-@media only screen and (min-width: 580px){
+// 565 - iphone5
+@media only screen and (min-width: 550px){
   .scalable-map {
 	display: inline-block;
 	width: 100%;
@@ -298,7 +299,7 @@ $svg-shown:				1;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (max-device-width : 320px) and (max-device-height: 480px)  {
   .svg-map {
 	width: 100%;
 	height: 100%;
