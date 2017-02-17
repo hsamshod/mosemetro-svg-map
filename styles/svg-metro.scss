@@ -276,6 +276,7 @@ $svg-shown:				1;
 	height: 100%;
 	& svg {
 	  width: auto !important;
+	  min-width: 100%;
 	}
   }
 }
@@ -310,10 +311,18 @@ $svg-shown:				1;
 	  width: 100%!important;
 	}
   }
+}
 
+
+@media only screen and (max-device-height : 320px) and (max-device-width: 480px)  {
+  .svg-map {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+  }
   @media (orientation: landscape) {
 	.svg-map > div {
-	  width: auto!important;
+	  width: 100%;
 	  height: 100%!important;;
 	}
   }

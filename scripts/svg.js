@@ -35,7 +35,9 @@ angular.module('svgmap', []).directive('svgMap', function() {
           bindClick() && ($scope.show_quick_selects = true);
         }
         if ($attrs.hasOwnProperty('scalable')) {
-          return bindPinch() && ($scope.is_scalable = true);
+          return ($scope.is_scalable = true) && ($timeout(function() {
+            return bindPinch();
+          }));
         }
       };
       selectAll = function() {
@@ -173,15 +175,18 @@ angular.module('svgmap', []).directive('svgMap', function() {
         });
       };
       bindPinch = function() {
+        $element.panzoom('reset');
         $element.panzoom('destroy');
         alignMap();
-        return $element.panzoom({
-          minScale: 1,
-          maxScale: 5,
-          increment: 1.2,
-          contain: 'automatic',
-          panOnlyWhenZoomed: false
-        });
+        return $timeout(function() {
+          return $element.panzoom({
+            minScale: 1,
+            maxScale: 5,
+            increment: 1.2,
+            contain: 'automatic',
+            panOnlyWhenZoomed: false
+          });
+        }, 500);
       };
       toggle = function(station, force) {
         if (_.isNumber(force)) {
@@ -280,27 +285,22 @@ angular.module('svgmap', []).directive('svgMap', function() {
         return $scope.orientation = window.innerHeight < window.innerWidth ? 'landscape' : 'portrait';
       };
       alignMap = function() {
-        var margin_top;
+        var child_width, margin_top;
+        margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2;
         $element.css({
-          transform: '',
-          transformOrigin: ''
+          marginTop: margin_top + 'px'
         });
-        if ($scope.orientation === 'landscape') {
-          margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2;
-          return $element.css({
-            marginTop: margin_top + 'px'
-          });
-        } else {
-          $element.css({
-            marginTop: ''
-          });
-          return $('> div', $element).css({
-            minWidth: $('> div > svg', $element).css('width')
-          });
-        }
+        child_width = $('svg', $element).actual('width');
+        $('> div', $element).css({
+          minWidth: child_width
+        });
+        return $element.css({
+          minWidth: child_width
+        });
       };
       watchOrientationChange = function() {
-        return $(window).off('resize').on('resize', render);
+        $(document).ready(function() {});
+        return $('#modal-svg').add(window).off('resize').on('resize', render);
       };
       watchOrientationChange();
       return render();

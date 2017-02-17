@@ -34,7 +34,7 @@ angular
 				selectAll() if $scope.selected and $scope.selected.length and _.isArray $scope.selected
 
 				bindClick() and $scope.show_quick_selects = true if $attrs.hasOwnProperty 'selectable'
-				bindPinch() && $scope.is_scalable = true if $attrs.hasOwnProperty 'scalable'
+				($scope.is_scalable = true) && ($timeout -> bindPinch()) if $attrs.hasOwnProperty 'scalable'
 
 			selectAll = ->
 				select station_id, true for station_id in $scope.selected
@@ -143,14 +143,17 @@ angular
 								handleQuickSelect line_id, station_id, mode
 
 			bindPinch = ->
+				$element.panzoom 'reset'
 				$element.panzoom 'destroy'
 				alignMap()
-				$element.panzoom
-					minScale: 1
-					maxScale: 5
-					increment: 1.2
-					contain: 'automatic'
-					panOnlyWhenZoomed: false
+				$timeout ->
+					$element.panzoom
+						minScale: 1
+						maxScale: 5
+						increment: 1.2
+						contain: 'automatic'
+						panOnlyWhenZoomed: false
+				,500
 
 			toggle = (station, force) ->
 				if _.isNumber force
@@ -216,24 +219,23 @@ angular
 			setOrientation = -> $scope.orientation = if window.innerHeight < window.innerWidth then 'landscape' else 'portrait'
 
 			alignMap = ->
+				margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2;
 				$element.css
-					transform: ''
-					transformOrigin: ''
-				if $scope.orientation is 'landscape'
-					margin_top = ($element.parent().actual('height') - $element.actual('height')) / 2
-					$element.css marginTop: margin_top + 'px'
-				else
-					$element.css marginTop: ''
-					$ '> div', $element
-						.css
-							minWidth: $('> div > svg', $element).css 'width'
+					marginTop: margin_top + 'px'
+
+				child_width = $ 'svg', $element
+									.actual 'width'
+				$ '> div', $element
+					.css minWidth: child_width
+				$element.css minWidth: child_width
 
 			watchOrientationChange = ->
-				$ window
-#					.off 'orientationchange'
-#					.on 'orientationchange', render
-					.off 'resize'
-					.on 'resize', render
+				$ document
+					.ready ->
+					$ '#modal-svg'
+						.add window
+						.off 'resize'
+						.on 'resize', render
 
 			watchOrientationChange()
 			render()
