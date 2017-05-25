@@ -148,12 +148,12 @@ angular
 				alignMap()
 				$timeout ->
 					$element.panzoom
-						minScale: 1
-						maxScale: 5
-						increment: 1.2
+						startTransform: 'scale(1.8)'
+						minScale: 1.8
+						maxScale: 1.8
 						contain: 'automatic'
 						panOnlyWhenZoomed: false
-				,500
+				, 500
 
 			toggle = (station, force) ->
 				if _.isNumber force
